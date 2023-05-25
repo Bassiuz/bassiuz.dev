@@ -1,3 +1,4 @@
+import 'package:fluid_ui_design/fluid_ui_design.dart';
 import 'package:flutter/material.dart';
 
 class TypefaceWidget extends StatelessWidget {
@@ -5,22 +6,25 @@ class TypefaceWidget extends StatelessWidget {
   final String textStyleName;
   final String testTextString;
 
-  const TypefaceWidget({super.key, required this.textStyle, required this.textStyleName, required this.testTextString});
+  final FluidConfig? config;
+
+  const TypefaceWidget(
+      {super.key, required this.textStyle, required this.textStyleName, required this.testTextString, this.config});
 
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(testTextString, style: textStyle),
         const Divider(),
-        Row(
-          children: [
-            Expanded(child: Text(textStyleName, style: Theme.of(context).textTheme.bodySmall)),
-            Text(textStyle.fontFamily!, style: Theme.of(context).textTheme.bodySmall),
-            Text(textStyle.fontWeight.toString(), style: Theme.of(context).textTheme.bodySmall),
-            Text(textStyle.fontSize.toString(), style: Theme.of(context).textTheme.bodySmall),
-          ],
-        )
+        Text(textStyleName, style: Theme.of(context).textTheme.bodySmall!.copyWith(fontSize: config?.fontSize(1))),
+        Text(textStyle.fontFamily!,
+            style: Theme.of(context).textTheme.bodySmall!.copyWith(fontSize: config?.fontSize(1))),
+        Text(textStyle.fontWeight.toString(),
+            style: Theme.of(context).textTheme.bodySmall!.copyWith(fontSize: config?.fontSize(1))),
+        Text(textStyle.fontSize.toString(),
+            style: Theme.of(context).textTheme.bodySmall!.copyWith(fontSize: config?.fontSize(1)))
       ],
     );
   }
