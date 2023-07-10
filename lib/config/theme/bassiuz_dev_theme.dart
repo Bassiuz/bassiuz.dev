@@ -4,14 +4,9 @@ import 'package:flutter/material.dart';
 import 'fonts/bassiuz_dev_text_theme.dart';
 
 ThemeData bassiuzDevTheme(BuildContext context) => ThemeData(
-      textTheme: bassiuzDevTextTheme(fluidConfig(
-        context,
-      )),
+      textTheme: bassiuzDevTextTheme(fluidConfig(context)),
       useMaterial3: true,
-      extensions: <ThemeExtension<dynamic>>[
-        fluidConfig(context),
-      ],
+      extensions: <ThemeExtension<dynamic>>[fluidConfig(context)],
     );
 
-FluidConfig fluidConfig(BuildContext context) =>
-    FluidConfig.fromContext(context, typeConfig: const TypeConfig(minBaseFontSize: 10, maxBaseFontSize: 16));
+FluidConfig fluidConfig(BuildContext context) => FluidConfig.fromContext(context);
