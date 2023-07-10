@@ -3,6 +3,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../../../core/extensions/context_extension.dart';
+import 'animated_phone_widget.dart';
+import 'animated_text.dart';
 
 class HomePageBanner extends StatefulWidget {
   const HomePageBanner({
@@ -22,14 +24,17 @@ class _HomePageBannerState extends State<HomePageBanner> {
   double containerHeight = 0;
   double containerHeight2 = 0;
 
-  double percentageVisible = 100;
-
+  double percentageVisible = 0;
+  final double _direcitionalityBreakPoint = 800;
   @override
   void initState() {
     super.initState();
     Future<void>.delayed(const Duration(seconds: 0)).then((_) => afterBuild());
 
     widget.parentScrollController.addListener(() {
+      if (!mounted) {
+        return;
+      }
       setState(() {
         percentageVisible = max(0, (widget.height - widget.parentScrollController.offset) / widget.height * 100);
       });
@@ -37,73 +42,51 @@ class _HomePageBannerState extends State<HomePageBanner> {
   }
 
   void afterBuild() {
-    if (containerHeight == 0) {
-      setState(() {
-        containerHeight = 1;
-      });
+    if (!mounted) {
+      return;
     }
-  }
-
-  void onFinishFirst() {
-    if (containerHeight2 == 0) {
-      setState(() {
-        containerHeight2 = 1;
-      });
-    }
+    setState(() {
+      percentageVisible = 100;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    return IntrinsicHeight(
-      child: Row(
+    List<Widget> children = [
+      AnimatedPhoneWidget(
+        height: widget.height,
+        percentageVisible: percentageVisible,
+      ),
+      Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          Expanded(
-            flex: 2,
-            child: SizedBox(
-              height: widget.height,
-              child: Stack(
-                children: [
-                  AnimatedContainer(
-                    duration: const Duration(milliseconds: 5000),
-                    curve: Curves.fastLinearToSlowEaseIn,
-                    height: (containerHeight2 * widget.height) * (percentageVisible / 100),
-                    child: Align(
-                      alignment: Alignment.bottomCenter,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Image.asset('assets/images/bassie.jpeg', width: 100, height: 100),
-                          const SizedBox(height: 130),
-                        ],
-                      ),
-                    ),
-                  ),
-                  AnimatedContainer(
-                    duration: const Duration(milliseconds: 5000),
-                    curve: Curves.fastLinearToSlowEaseIn,
-                    onEnd: onFinishFirst,
-                    height: (containerHeight * widget.height) * (percentageVisible / 100) * (percentageVisible / 100),
-                    child: Align(
-                      alignment: Alignment.bottomCenter,
-                      child: Image.asset(
-                        'assets/images/phone.png',
-                        width: 250,
-                        height: 250,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+          Text(
+            'Bassiuz.dev',
+            style: context.theme.textTheme.headlineMedium,
           ),
-          Expanded(
-            flex: 3,
-            child: Container(
-              color: context.theme.colorScheme.secondary,
-            ),
-          ),
+          const AnimatedText(),
         ],
       ),
-    );
+    ];
+
+    return MediaQuery.sizeOf(context).width > _direcitionalityBreakPoint
+        ? IntrinsicHeight(
+            child: Row(
+              children: [
+                Expanded(
+                  flex: 2,
+                  child: children.first,
+                ),
+                Expanded(
+                  flex: 3,
+                  child: children.last,
+                ),
+              ],
+            ),
+          )
+        : Column(
+            children: children,
+          );
   }
 }

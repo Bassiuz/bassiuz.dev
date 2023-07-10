@@ -18,16 +18,27 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: ListView(
-      controller: _controller,
+        body: Stack(
       children: [
-        HomePageBanner(
-          parentScrollController: _controller,
-          height: FluidSize(fluidConfig: context.fluid, min: 300, max: 500).value,
-        ),
-        Container(
-          height: 1200,
-          color: Colors.red,
+        SizedBox(
+            height: double.infinity,
+            child: Image.asset(
+              'assets/images/space.jpg',
+              fit: BoxFit.fitHeight,
+              color: Colors.black.withOpacity(0.7),
+              colorBlendMode: BlendMode.darken,
+            )),
+        ListView(
+          controller: _controller,
+          children: [
+            HomePageBanner(
+              parentScrollController: _controller,
+              height: FluidSize(fluidConfig: context.fluid, min: 300, max: 500).value,
+            ),
+            Container(
+              height: 1200,
+            ),
+          ],
         ),
       ],
     ));
