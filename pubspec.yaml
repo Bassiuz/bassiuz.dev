@@ -13,8 +13,8 @@ dependencies:
   auto_route: ^6.3.0
   fluid_ui_design:
     git:
-      url: git@gitlab.dcc.tools:niels/fluid-ui-design.git
-      ref: feature/convert-to-package # branch name
+      url: https://github.com/DutchCodingCompany/fluid_ui_design.git
+      ref: feature/device-preview # branch name
   google_fonts: ^4.0.5
 
 

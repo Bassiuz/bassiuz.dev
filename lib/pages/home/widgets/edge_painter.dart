@@ -3,14 +3,17 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class EdgePainter extends CustomPainter {
-  EdgePainter({this.segments = 8});
+  EdgePainter({this.seed = 124124124});
 
-  final int segments;
+  final int seed;
   Path path = Path();
   Paint paintObject = Paint();
 
   @override
   void paint(Canvas canvas, Size size) {
+    Random random = Random(seed);
+
+    int segments = random.nextInt(5) + 3;
     double currentHeight = 0;
 
     path = Path();
@@ -20,7 +23,7 @@ class EdgePainter extends CustomPainter {
     int total = 0;
 
     for (var i = 0; i < segments; i++) {
-      int value = Random().nextInt(30) + 100;
+      int value = random.nextInt(30) + 100;
       segmentParts.add(value);
       total += value;
     }
@@ -36,7 +39,7 @@ class EdgePainter extends CustomPainter {
         pointDown(canvas, startWidth, size.height, currentHeight, width - startWidth);
         currentHeight = 0;
       } else {
-        currentHeight = size.height - (size.height * ((Random().nextInt(30) + 70) / 100));
+        currentHeight = size.height - (size.height * ((random.nextInt(30) + 70) / 100));
         pointUp(canvas, startWidth, size.height, currentHeight, width - startWidth);
       }
     }

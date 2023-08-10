@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
-import 'widgets/edged_banner.dart';
+import 'components/banner_component.dart';
 
 @RoutePage()
 class HomePage extends StatefulWidget {
@@ -16,6 +16,11 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: SizedBox(height: MediaQuery.sizeOf(context).height * 0.7, child: const EdgedBanner()));
+    return Scaffold(
+        body: ListView(
+      children: const [
+        BannerComponent(),
+      ],
+    ));
   }
 }

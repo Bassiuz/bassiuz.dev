@@ -64,7 +64,8 @@ class _AnimatedTextState extends State<AnimatedText> {
   Widget build(BuildContext context) {
     return Text(
       '${currentText}_',
-      style: context.theme.textTheme.headlineMedium,
+      style: context.theme.textTheme.headlineSmall,
+      textAlign: TextAlign.center,
     );
   }
 }

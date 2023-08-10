@@ -237,11 +237,11 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: "feature/convert-to-package"
-      resolved-ref: "16d592fa719de56f4277ae43adfc2be9a9c264b1"
-      url: "git@gitlab.dcc.tools:niels/fluid-ui-design.git"
+      ref: "feature/device-preview"
+      resolved-ref: "2572de578e94e96dc826a198cb31967b2fc5fff7"
+      url: "https://github.com/DutchCodingCompany/fluid_ui_design.git"
     source: git
-    version: "1.0.0+1"
+    version: "0.0.1-beta.1"
   flutter:
     dependency: "direct main"
     description: flutter

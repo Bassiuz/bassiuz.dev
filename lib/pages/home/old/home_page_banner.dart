@@ -3,8 +3,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../../../core/extensions/context_extension.dart';
+import '../widgets/animated_text.dart';
 import 'animated_phone_widget.dart';
-import 'animated_text.dart';
 
 class HomePageBanner extends StatefulWidget {
   const HomePageBanner({

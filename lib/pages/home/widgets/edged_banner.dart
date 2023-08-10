@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../../../core/sizes.dart';
 import '../../../gen/assets.gen.dart';
 import 'edge_painter.dart';
 
@@ -28,10 +29,10 @@ class EdgedBanner extends StatelessWidget {
         Align(
           alignment: Alignment.bottomCenter,
           child: SizedBox(
-            height: 100,
+            height: Sizes.teethSize,
             width: double.infinity,
             child: CustomPaint(
-              painter: EdgePainter(segments: Random().nextInt(5) + 3),
+              painter: EdgePainter(seed: Random().nextInt(100000000)),
             ),
           ),
         ),
