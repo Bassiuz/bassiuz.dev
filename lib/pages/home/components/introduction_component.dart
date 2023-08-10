@@ -11,19 +11,25 @@ class IntroductionComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(context.fluid.spaces.m),
-      child: Row(
-        children: [
-          Flexible(
-            flex: 2,
-            child: Assets.images.bassie.image(
-              fit: BoxFit.cover,
-            ),
+      child: Align(
+        alignment: Alignment.center,
+        child: ConstrainedBox(
+          constraints: BoxConstraints(maxWidth: context.fluid.viewportConfig.maxViewportSize),
+          child: Row(
+            children: [
+              Flexible(
+                flex: 2,
+                child: Assets.images.bassie.image(
+                  fit: BoxFit.cover,
+                ),
+              ),
+              SizedBox(
+                width: context.fluid.spaces.s,
+              ),
+              const Flexible(flex: 3, child: TiltedTextWidget()),
+            ],
           ),
-          SizedBox(
-            width: context.fluid.spaces.s,
-          ),
-          const Flexible(flex: 3, child: TiltedTextWidget()),
-        ],
+        ),
       ),
     );
   }

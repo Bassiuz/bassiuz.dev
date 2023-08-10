@@ -16,4 +16,5 @@ FluidConfig fluidConfig(BuildContext context) => FluidConfig.fromContext(context
       maxBaseFontSize: 12,
       minTypeScaleModifier: 1.15,
       maxTypeScaleModifier: 1.25,
-    ));
+    ),
+    viewportConfig: const ViewportConfig(maxViewportSize: 1200));
