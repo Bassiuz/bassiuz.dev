@@ -76,11 +76,11 @@ class _AnimatedTextState extends State<AnimatedText> {
     return Text.rich(
       TextSpan(
         text: currentText,
-        style: context.theme.textTheme.headlineSmall,
+        style: context.theme.textTheme.displaySmall,
         children: [
           TextSpan(
             text: '_',
-            style: context.theme.textTheme.headlineSmall!.copyWith(color: visible ? null : Colors.transparent),
+            style: context.theme.textTheme.displaySmall!.copyWith(color: visible ? null : Colors.transparent),
           )
         ],
       ),

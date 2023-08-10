@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import 'components/banner_component.dart';
+import 'components/introduction_component.dart';
 
 @RoutePage()
 class HomePage extends StatefulWidget {
@@ -20,6 +21,7 @@ class _HomePageState extends State<HomePage> {
         body: ListView(
       children: const [
         BannerComponent(),
+        IntroductionComponent(),
       ],
     ));
   }

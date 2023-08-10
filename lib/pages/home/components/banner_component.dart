@@ -24,13 +24,13 @@ class BannerComponent extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Hi, I\'m',
-                        style: context.theme.textTheme.headlineSmall,
+                        'Welcome',
+                        style: context.theme.textTheme.displaySmall,
                         textAlign: TextAlign.center,
                       ),
                       Text(
                         'Bas de Vaan',
-                        style: context.theme.textTheme.headlineMedium,
+                        style: context.theme.textTheme.displayMedium,
                         textAlign: TextAlign.center,
                       ),
                       const AnimatedText(),
