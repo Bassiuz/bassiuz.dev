@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-import '../widgets/inherited_list_view.dart';
+import '../widgets/scrolling/inherited_list_view.dart';
 
 class MenuBarComponent extends StatefulWidget {
   const MenuBarComponent({super.key});
@@ -18,7 +18,7 @@ class _MenuBarComponentState extends State<MenuBarComponent> {
 
   void initScrollListener() {
     setState(() {
-      _scrollController = InheritedListView.maybeOf(context)!.scrollController;
+      _scrollController = InheritedListView.maybeOf(context)!.scrollManager.scrollController;
       _scrollController!.addListener(() => setState(() {
             _scrollController!.offset > 0 ? showMenuBar = true : showMenuBar = false;
           }));
