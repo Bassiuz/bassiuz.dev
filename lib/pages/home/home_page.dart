@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
                 children: const [
                   BannerComponent(),
                   IntroductionComponent(),
-                  SkillGridComponent(key: ValueKey('skill grid 1')),
+                  SkillGridComponent(indexInScroll: 2),
                 ],
               ),
             ),
