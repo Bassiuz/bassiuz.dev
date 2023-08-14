@@ -47,7 +47,7 @@ class _MenuBarComponentState extends State<MenuBarComponent> {
             filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
             child: AppBar(
               backgroundColor: Colors.white.withOpacity(0.2),
-              title: const Text('Glassmorphism AppBar'),
+              title: Text('Screenwidth: ${MediaQuery.sizeOf(context).width}'),
               leading: const Icon(Icons.chevron_left),
               elevation: 0.0,
             ),

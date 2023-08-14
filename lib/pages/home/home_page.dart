@@ -6,6 +6,7 @@ import 'components/banner_component.dart';
 import 'components/introduction_component.dart';
 import 'components/menu_bar_component.dart';
 import 'components/skill_grid_component.dart';
+import 'components/soclals_component.dart';
 import 'widgets/scrolling/inherited_list_view.dart';
 
 @RoutePage()
@@ -33,6 +34,7 @@ class _HomePageState extends State<HomePage> {
                   BannerComponent(),
                   IntroductionComponent(),
                   SkillGridComponent(indexInScroll: 2),
+                  SocialsComponent(indexInScroll: 3),
                 ],
               ),
             ),
