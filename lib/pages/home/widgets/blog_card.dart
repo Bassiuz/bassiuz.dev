@@ -17,22 +17,26 @@ class BlogCard extends StatelessWidget {
           padding: EdgeInsets.all(context.fluid.spaces.s),
           child: Column(
             children: [
+              AspectRatio(
+                aspectRatio: 3 / 2,
+                child: SizedBox(
+                    child: Assets.images.backgroundBassie.image(
+                  fit: BoxFit.cover,
+                )),
+              ),
               SizedBox(
-                  height: 200,
-                  child: Assets.images.backgroundBassie.image(
-                    fit: BoxFit.cover,
-                  )),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('Blog Title', style: context.theme.textTheme.headlineSmall),
-                  Text('12 / 12 / 2023',
-                      style: context.theme.textTheme.bodySmall!.copyWith(
-                        color: Colors.black54,
-                        fontStyle: FontStyle.italic,
-                      )),
-                ],
+                width: double.infinity,
+                child: Wrap(
+                  alignment: WrapAlignment.spaceBetween,
+                  children: [
+                    Text('Blog Title', style: context.theme.textTheme.headlineSmall),
+                    Text('12 / 12 / 2023',
+                        style: context.theme.textTheme.bodySmall!.copyWith(
+                          color: Colors.black54,
+                          fontStyle: FontStyle.italic,
+                        )),
+                  ],
+                ),
               ),
               Text(
                 'Blog Description with a describing of what the blog is about and that will elipse into a couple of dots if it doesnt fit in a couple of rows of text to keep it a small card',
