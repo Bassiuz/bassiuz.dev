@@ -28,9 +28,15 @@ class BlogComponent extends StatelessWidget {
                 Row(
                   children: [
                     const BlogCard(),
-                    SizedBox(width: context.fluid.space.from.zero.to.m),
+                    AnimatedContainer(
+                      width: visible ? context.fluid.space.from.zero.to.m : 100,
+                      duration: const Duration(milliseconds: 200),
+                    ),
                     const BlogCard(),
-                    SizedBox(width: context.fluid.space.from.zero.to.m),
+                    AnimatedContainer(
+                      width: visible ? context.fluid.space.from.zero.to.m : 100,
+                      duration: const Duration(milliseconds: 200),
+                    ),
                     const BlogCard(),
                   ],
                 ),

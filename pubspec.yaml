@@ -14,7 +14,7 @@ dependencies:
   fluid_ui_design:
     git:
       url: https://github.com/DutchCodingCompany/fluid_ui_design.git
-      ref: feature/device-preview # branch name
+      ref: feature/improve-playground # branch name
   google_fonts: ^4.0.5
   scrollview_observer: ^1.15.0
   ionicons: ^0.2.2

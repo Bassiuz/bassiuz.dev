@@ -237,8 +237,8 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: "feature/device-preview"
-      resolved-ref: "2572de578e94e96dc826a198cb31967b2fc5fff7"
+      ref: "feature/improve-playground"
+      resolved-ref: e1d57a8d70563ee0cb0032c967d5df23a17e1caf
       url: "https://github.com/DutchCodingCompany/fluid_ui_design.git"
     source: git
     version: "0.0.1-beta.1"
