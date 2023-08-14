@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:scrollview_observer/scrollview_observer.dart';
 
 import 'components/banner_component.dart';
+import 'components/blog_component.dart';
 import 'components/introduction_component.dart';
 import 'components/menu_bar_component.dart';
-import 'components/skill_grid_component.dart';
 import 'components/soclals_component.dart';
 import 'widgets/scrolling/inherited_list_view.dart';
 
@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
                 children: const [
                   BannerComponent(),
                   IntroductionComponent(),
-                  SkillGridComponent(indexInScroll: 2),
+                  BlogComponent(indexInScroll: 2),
                   SocialsComponent(indexInScroll: 3),
                 ],
               ),

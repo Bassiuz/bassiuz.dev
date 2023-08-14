@@ -4,56 +4,45 @@ import 'package:ionicons/ionicons.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../core/extensions/context_extension.dart';
+import 'circle_hover_inkwell.dart';
 
-class SocialIcon extends StatefulWidget {
+class SocialIcon extends StatelessWidget {
   const SocialIcon({super.key, required this.social});
 
   final Socials social;
 
   @override
-  State<SocialIcon> createState() => _SocialIconState();
-}
-
-class _SocialIconState extends State<SocialIcon> {
-  bool hover = false;
-
-  @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () async => await canLaunchUrl(Uri.parse(widget.social.url))
-          ? await launchUrl(Uri.parse(widget.social.url), mode: LaunchMode.externalApplication)
+    return CircleHoverInkwell(
+      onClick: () async => await canLaunchUrl(Uri.parse(social.url))
+          ? await launchUrl(Uri.parse(social.url), mode: LaunchMode.externalApplication)
           : print('je moeder heet henk'),
-      onHover: (val) => setState(() => hover = val),
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 100),
-        decoration: BoxDecoration(color: hover ? Colors.white24 : null, borderRadius: BorderRadius.circular(1337)),
-        child: LayoutBuilder(builder: (context, boxConstraints) {
-          return Padding(
-            padding: EdgeInsets.all(context.fluid.spaces.xs),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                switch (widget.social) {
-                  Socials.twitter => const Icon(Ionicons.logo_twitter, color: Colors.white),
-                  Socials.github => const Icon(Ionicons.logo_github, color: Colors.white),
-                  Socials.medium => const Icon(Ionicons.logo_medium, color: Colors.white),
-                  Socials.linkedin => const Icon(Ionicons.logo_linkedin, color: Colors.white),
+      child: LayoutBuilder(builder: (context, boxConstraints) {
+        return Padding(
+          padding: EdgeInsets.all(context.fluid.spaces.xs),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              switch (social) {
+                Socials.twitter => const Icon(Ionicons.logo_twitter, color: Colors.white),
+                Socials.github => const Icon(Ionicons.logo_github, color: Colors.white),
+                Socials.medium => const Icon(Ionicons.logo_medium, color: Colors.white),
+                Socials.linkedin => const Icon(Ionicons.logo_linkedin, color: Colors.white),
+              },
+              Text(
+                switch (social) {
+                  Socials.twitter => 'Twitter',
+                  Socials.github => 'Github',
+                  Socials.medium => 'Medium',
+                  Socials.linkedin => 'LinkedIn',
                 },
-                Text(
-                  switch (widget.social) {
-                    Socials.twitter => 'Twitter',
-                    Socials.github => 'Github',
-                    Socials.medium => 'Medium',
-                    Socials.linkedin => 'LinkedIn',
-                  },
-                  style: context.theme.textTheme.bodyLarge!.copyWith(color: Colors.white),
-                ),
-              ],
-            ),
-          );
-        }),
-      ),
+                style: context.theme.textTheme.bodyLarge!.copyWith(color: Colors.white),
+              ),
+            ],
+          ),
+        );
+      }),
     );
   }
 }

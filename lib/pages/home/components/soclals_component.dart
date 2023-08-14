@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../../../core/extensions/breakpoint_extension.dart';
 import '../../../core/extensions/context_extension.dart';
 import '../../../gen/assets.gen.dart';
+import '../widgets/max_width_wrapper.dart';
 import '../widgets/social_icon.dart';
 import '../widgets/visible_widget.dart';
 
@@ -32,8 +33,7 @@ class SocialsComponent extends StatelessWidget {
               ),
             ),
             Center(
-              child: ConstrainedBox(
-                constraints: BoxConstraints(maxWidth: context.fluid.viewportConfig.maxViewportSize),
+              child: MaxWidthWrapper(
                 child: Padding(
                   padding: EdgeInsets.all(context.fluid.spaces.m),
                   child: Column(
