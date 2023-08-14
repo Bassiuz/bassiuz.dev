@@ -41,7 +41,7 @@ class _MenuBarComponentState extends State<MenuBarComponent> {
       curve: Curves.fastLinearToSlowEaseIn,
       child: SizedBox(
         width: double.infinity,
-        height: 50,
+        height: 50 + MediaQuery.of(context).padding.top,
         child: ClipRRect(
           child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
