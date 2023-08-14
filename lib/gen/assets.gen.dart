@@ -169,11 +169,56 @@ class $AssetsImagesGen {
   /// File path: assets/images/phone.png
   AssetGenImage get phone => const AssetGenImage('assets/images/phone.png');
 
+  /// File path: assets/images/screenshot_1.jpeg
+  AssetGenImage get screenshot1 =>
+      const AssetGenImage('assets/images/screenshot_1.jpeg');
+
+  /// File path: assets/images/screenshot_2.jpg
+  AssetGenImage get screenshot2 =>
+      const AssetGenImage('assets/images/screenshot_2.jpg');
+
+  /// File path: assets/images/screenshot_3.jpg
+  AssetGenImage get screenshot3 =>
+      const AssetGenImage('assets/images/screenshot_3.jpg');
+
+  /// File path: assets/images/screenshot_4.jpg
+  AssetGenImage get screenshot4 =>
+      const AssetGenImage('assets/images/screenshot_4.jpg');
+
+  /// File path: assets/images/screenshot_5.jpg
+  AssetGenImage get screenshot5 =>
+      const AssetGenImage('assets/images/screenshot_5.jpg');
+
+  /// File path: assets/images/screenshot_6.jpg
+  AssetGenImage get screenshot6 =>
+      const AssetGenImage('assets/images/screenshot_6.jpg');
+
+  /// File path: assets/images/screenshot_7.jpg
+  AssetGenImage get screenshot7 =>
+      const AssetGenImage('assets/images/screenshot_7.jpg');
+
+  /// File path: assets/images/screenshot_8.jpg
+  AssetGenImage get screenshot8 =>
+      const AssetGenImage('assets/images/screenshot_8.jpg');
+
   /// File path: assets/images/space.jpg
   AssetGenImage get space => const AssetGenImage('assets/images/space.jpg');
 
   /// List of all assets
-  List<AssetGenImage> get values => [backgroundBassie, bassie, phone, space];
+  List<AssetGenImage> get values => [
+        backgroundBassie,
+        bassie,
+        phone,
+        screenshot1,
+        screenshot2,
+        screenshot3,
+        screenshot4,
+        screenshot5,
+        screenshot6,
+        screenshot7,
+        screenshot8,
+        space
+      ];
 }
 
 class Assets {
