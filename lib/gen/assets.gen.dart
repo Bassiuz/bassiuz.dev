@@ -159,6 +159,10 @@ class $AssetsGoogleFontsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/background_bassie-min-min.jpg
+  AssetGenImage get backgroundBassieMinMin =>
+      const AssetGenImage('assets/images/background_bassie-min-min.jpg');
+
   /// File path: assets/images/background_bassie-min.jpg
   AssetGenImage get backgroundBassieMin =>
       const AssetGenImage('assets/images/background_bassie-min.jpg');
@@ -167,12 +171,20 @@ class $AssetsImagesGen {
   AssetGenImage get backgroundBassie =>
       const AssetGenImage('assets/images/background_bassie.jpg');
 
+  /// File path: assets/images/bassie-min-min.jpg
+  AssetGenImage get bassieMinMin =>
+      const AssetGenImage('assets/images/bassie-min-min.jpg');
+
   /// File path: assets/images/bassie-min.jpeg
   AssetGenImage get bassieMin =>
       const AssetGenImage('assets/images/bassie-min.jpeg');
 
   /// File path: assets/images/bassie.jpeg
   AssetGenImage get bassie => const AssetGenImage('assets/images/bassie.jpeg');
+
+  /// File path: assets/images/bassie2-min-min.jpg
+  AssetGenImage get bassie2MinMin =>
+      const AssetGenImage('assets/images/bassie2-min-min.jpg');
 
   /// File path: assets/images/bassie2-min.jpg
   AssetGenImage get bassie2Min =>
@@ -181,12 +193,20 @@ class $AssetsImagesGen {
   /// File path: assets/images/bassie2.jpg
   AssetGenImage get bassie2 => const AssetGenImage('assets/images/bassie2.jpg');
 
+  /// File path: assets/images/fietsen-min-min.jpg
+  AssetGenImage get fietsenMinMin =>
+      const AssetGenImage('assets/images/fietsen-min-min.jpg');
+
   /// File path: assets/images/fietsen-min.jpg
   AssetGenImage get fietsenMin =>
       const AssetGenImage('assets/images/fietsen-min.jpg');
 
   /// File path: assets/images/fietsen.jpg
   AssetGenImage get fietsen => const AssetGenImage('assets/images/fietsen.jpg');
+
+  /// File path: assets/images/nature-min-min.jpg
+  AssetGenImage get natureMinMin =>
+      const AssetGenImage('assets/images/nature-min-min.jpg');
 
   /// File path: assets/images/nature-min.jpg
   AssetGenImage get natureMin =>
@@ -195,12 +215,20 @@ class $AssetsImagesGen {
   /// File path: assets/images/nature.jpg
   AssetGenImage get nature => const AssetGenImage('assets/images/nature.jpg');
 
+  /// File path: assets/images/phone-min-min.jpg
+  AssetGenImage get phoneMinMin =>
+      const AssetGenImage('assets/images/phone-min-min.jpg');
+
   /// File path: assets/images/phone-min.png
   AssetGenImage get phoneMin =>
       const AssetGenImage('assets/images/phone-min.png');
 
   /// File path: assets/images/phone.png
   AssetGenImage get phone => const AssetGenImage('assets/images/phone.png');
+
+  /// File path: assets/images/screenshot_1-min-min.jpg
+  AssetGenImage get screenshot1MinMin =>
+      const AssetGenImage('assets/images/screenshot_1-min-min.jpg');
 
   /// File path: assets/images/screenshot_1-min.jpeg
   AssetGenImage get screenshot1Min =>
@@ -210,6 +238,10 @@ class $AssetsImagesGen {
   AssetGenImage get screenshot1 =>
       const AssetGenImage('assets/images/screenshot_1.jpeg');
 
+  /// File path: assets/images/screenshot_2-min-min.jpg
+  AssetGenImage get screenshot2MinMin =>
+      const AssetGenImage('assets/images/screenshot_2-min-min.jpg');
+
   /// File path: assets/images/screenshot_2-min.jpg
   AssetGenImage get screenshot2Min =>
       const AssetGenImage('assets/images/screenshot_2-min.jpg');
@@ -217,6 +249,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/screenshot_2.jpg
   AssetGenImage get screenshot2 =>
       const AssetGenImage('assets/images/screenshot_2.jpg');
+
+  /// File path: assets/images/screenshot_3-min-min.jpg
+  AssetGenImage get screenshot3MinMin =>
+      const AssetGenImage('assets/images/screenshot_3-min-min.jpg');
 
   /// File path: assets/images/screenshot_3-min.jpg
   AssetGenImage get screenshot3Min =>
@@ -226,6 +262,10 @@ class $AssetsImagesGen {
   AssetGenImage get screenshot3 =>
       const AssetGenImage('assets/images/screenshot_3.jpg');
 
+  /// File path: assets/images/screenshot_4-min-min.jpg
+  AssetGenImage get screenshot4MinMin =>
+      const AssetGenImage('assets/images/screenshot_4-min-min.jpg');
+
   /// File path: assets/images/screenshot_4-min.jpg
   AssetGenImage get screenshot4Min =>
       const AssetGenImage('assets/images/screenshot_4-min.jpg');
@@ -233,6 +273,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/screenshot_4.jpg
   AssetGenImage get screenshot4 =>
       const AssetGenImage('assets/images/screenshot_4.jpg');
+
+  /// File path: assets/images/screenshot_5-min-min.jpg
+  AssetGenImage get screenshot5MinMin =>
+      const AssetGenImage('assets/images/screenshot_5-min-min.jpg');
 
   /// File path: assets/images/screenshot_5-min.jpg
   AssetGenImage get screenshot5Min =>
@@ -242,6 +286,10 @@ class $AssetsImagesGen {
   AssetGenImage get screenshot5 =>
       const AssetGenImage('assets/images/screenshot_5.jpg');
 
+  /// File path: assets/images/screenshot_6-min-min.jpg
+  AssetGenImage get screenshot6MinMin =>
+      const AssetGenImage('assets/images/screenshot_6-min-min.jpg');
+
   /// File path: assets/images/screenshot_6-min.jpg
   AssetGenImage get screenshot6Min =>
       const AssetGenImage('assets/images/screenshot_6-min.jpg');
@@ -249,6 +297,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/screenshot_6.jpg
   AssetGenImage get screenshot6 =>
       const AssetGenImage('assets/images/screenshot_6.jpg');
+
+  /// File path: assets/images/screenshot_7-min-min.jpg
+  AssetGenImage get screenshot7MinMin =>
+      const AssetGenImage('assets/images/screenshot_7-min-min.jpg');
 
   /// File path: assets/images/screenshot_7-min.jpg
   AssetGenImage get screenshot7Min =>
@@ -258,6 +310,10 @@ class $AssetsImagesGen {
   AssetGenImage get screenshot7 =>
       const AssetGenImage('assets/images/screenshot_7.jpg');
 
+  /// File path: assets/images/screenshot_8-min-min.jpg
+  AssetGenImage get screenshot8MinMin =>
+      const AssetGenImage('assets/images/screenshot_8-min-min.jpg');
+
   /// File path: assets/images/screenshot_8-min.jpg
   AssetGenImage get screenshot8Min =>
       const AssetGenImage('assets/images/screenshot_8-min.jpg');
@@ -265,6 +321,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/screenshot_8.jpg
   AssetGenImage get screenshot8 =>
       const AssetGenImage('assets/images/screenshot_8.jpg');
+
+  /// File path: assets/images/space-min-min.jpg
+  AssetGenImage get spaceMinMin =>
+      const AssetGenImage('assets/images/space-min-min.jpg');
 
   /// File path: assets/images/space-min.jpg
   AssetGenImage get spaceMin =>
@@ -275,34 +335,49 @@ class $AssetsImagesGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [
+        backgroundBassieMinMin,
         backgroundBassieMin,
         backgroundBassie,
+        bassieMinMin,
         bassieMin,
         bassie,
+        bassie2MinMin,
         bassie2Min,
         bassie2,
+        fietsenMinMin,
         fietsenMin,
         fietsen,
+        natureMinMin,
         natureMin,
         nature,
+        phoneMinMin,
         phoneMin,
         phone,
+        screenshot1MinMin,
         screenshot1Min,
         screenshot1,
+        screenshot2MinMin,
         screenshot2Min,
         screenshot2,
+        screenshot3MinMin,
         screenshot3Min,
         screenshot3,
+        screenshot4MinMin,
         screenshot4Min,
         screenshot4,
+        screenshot5MinMin,
         screenshot5Min,
         screenshot5,
+        screenshot6MinMin,
         screenshot6Min,
         screenshot6,
+        screenshot7MinMin,
         screenshot7Min,
         screenshot7,
+        screenshot8MinMin,
         screenshot8Min,
         screenshot8,
+        spaceMinMin,
         spaceMin,
         space
       ];
