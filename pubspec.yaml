@@ -13,9 +13,12 @@ dependencies:
   auto_route: ^6.3.0
   fluid_ui_design:
     git:
-      url: git@gitlab.dcc.tools:niels/fluid-ui-design.git
-      ref: feature/convert-to-package # branch name
+      url: https://github.com/DutchCodingCompany/fluid_ui_design.git
+      ref: feature/improve-playground # branch name
   google_fonts: ^4.0.5
+  scrollview_observer: ^1.15.0
+  ionicons: ^0.2.2
+  url_launcher: ^6.1.12
 
 
 dev_dependencies:

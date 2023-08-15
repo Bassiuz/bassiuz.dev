@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -14,6 +15,7 @@ class AnimatedText extends StatefulWidget {
 class _AnimatedTextState extends State<AnimatedText> {
   String currentText = 'Software Developer';
   String nextText = 'Software Developer';
+  bool visible = true;
 
   static const List<String> availableTexts = [
     'Software Developer',
@@ -32,6 +34,15 @@ class _AnimatedTextState extends State<AnimatedText> {
   void initState() {
     super.initState();
     setNextCharacterDelayed();
+    Timer.periodic(const Duration(milliseconds: 500), (_) {
+      if (!mounted) {
+        return;
+      }
+
+      setState(() {
+        visible = !visible;
+      });
+    });
   }
 
   void setNextCharacterDelayed() {
@@ -62,9 +73,18 @@ class _AnimatedTextState extends State<AnimatedText> {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      '${currentText}_',
-      style: context.theme.textTheme.headlineMedium,
+    return Text.rich(
+      TextSpan(
+        text: currentText,
+        style: context.theme.textTheme.displaySmall,
+        children: [
+          TextSpan(
+            text: '_',
+            style: context.theme.textTheme.displaySmall!.copyWith(color: visible ? null : Colors.transparent),
+          )
+        ],
+      ),
+      textAlign: TextAlign.center,
     );
   }
 }
