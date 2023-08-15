@@ -14,14 +14,14 @@ class ScreenshotCarrousel extends StatefulWidget {
 }
 
 List<AssetGenImage> screenshots = [
-  Assets.images.screenshot1,
-  Assets.images.screenshot2,
-  Assets.images.screenshot3,
-  Assets.images.screenshot4,
-  Assets.images.screenshot5,
-  Assets.images.screenshot6,
-  Assets.images.screenshot7,
-  Assets.images.screenshot8,
+  Assets.images.screenshot1Min,
+  Assets.images.screenshot2Min,
+  Assets.images.screenshot3Min,
+  Assets.images.screenshot4Min,
+  Assets.images.screenshot5Min,
+  Assets.images.screenshot6Min,
+  Assets.images.screenshot7Min,
+  Assets.images.screenshot8Min,
 ];
 
 class _ScreenshotCarrouselState extends State<ScreenshotCarrousel> with SingleTickerProviderStateMixin {

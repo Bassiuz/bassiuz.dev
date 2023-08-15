@@ -159,76 +159,151 @@ class $AssetsGoogleFontsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/background_bassie-min.jpg
+  AssetGenImage get backgroundBassieMin =>
+      const AssetGenImage('assets/images/background_bassie-min.jpg');
+
   /// File path: assets/images/background_bassie.jpg
   AssetGenImage get backgroundBassie =>
       const AssetGenImage('assets/images/background_bassie.jpg');
 
+  /// File path: assets/images/bassie-min.jpeg
+  AssetGenImage get bassieMin =>
+      const AssetGenImage('assets/images/bassie-min.jpeg');
+
   /// File path: assets/images/bassie.jpeg
   AssetGenImage get bassie => const AssetGenImage('assets/images/bassie.jpeg');
+
+  /// File path: assets/images/bassie2-min.jpg
+  AssetGenImage get bassie2Min =>
+      const AssetGenImage('assets/images/bassie2-min.jpg');
 
   /// File path: assets/images/bassie2.jpg
   AssetGenImage get bassie2 => const AssetGenImage('assets/images/bassie2.jpg');
 
+  /// File path: assets/images/fietsen-min.jpg
+  AssetGenImage get fietsenMin =>
+      const AssetGenImage('assets/images/fietsen-min.jpg');
+
   /// File path: assets/images/fietsen.jpg
   AssetGenImage get fietsen => const AssetGenImage('assets/images/fietsen.jpg');
+
+  /// File path: assets/images/nature-min.jpg
+  AssetGenImage get natureMin =>
+      const AssetGenImage('assets/images/nature-min.jpg');
 
   /// File path: assets/images/nature.jpg
   AssetGenImage get nature => const AssetGenImage('assets/images/nature.jpg');
 
+  /// File path: assets/images/phone-min.png
+  AssetGenImage get phoneMin =>
+      const AssetGenImage('assets/images/phone-min.png');
+
   /// File path: assets/images/phone.png
   AssetGenImage get phone => const AssetGenImage('assets/images/phone.png');
+
+  /// File path: assets/images/screenshot_1-min.jpeg
+  AssetGenImage get screenshot1Min =>
+      const AssetGenImage('assets/images/screenshot_1-min.jpeg');
 
   /// File path: assets/images/screenshot_1.jpeg
   AssetGenImage get screenshot1 =>
       const AssetGenImage('assets/images/screenshot_1.jpeg');
 
+  /// File path: assets/images/screenshot_2-min.jpg
+  AssetGenImage get screenshot2Min =>
+      const AssetGenImage('assets/images/screenshot_2-min.jpg');
+
   /// File path: assets/images/screenshot_2.jpg
   AssetGenImage get screenshot2 =>
       const AssetGenImage('assets/images/screenshot_2.jpg');
+
+  /// File path: assets/images/screenshot_3-min.jpg
+  AssetGenImage get screenshot3Min =>
+      const AssetGenImage('assets/images/screenshot_3-min.jpg');
 
   /// File path: assets/images/screenshot_3.jpg
   AssetGenImage get screenshot3 =>
       const AssetGenImage('assets/images/screenshot_3.jpg');
 
+  /// File path: assets/images/screenshot_4-min.jpg
+  AssetGenImage get screenshot4Min =>
+      const AssetGenImage('assets/images/screenshot_4-min.jpg');
+
   /// File path: assets/images/screenshot_4.jpg
   AssetGenImage get screenshot4 =>
       const AssetGenImage('assets/images/screenshot_4.jpg');
+
+  /// File path: assets/images/screenshot_5-min.jpg
+  AssetGenImage get screenshot5Min =>
+      const AssetGenImage('assets/images/screenshot_5-min.jpg');
 
   /// File path: assets/images/screenshot_5.jpg
   AssetGenImage get screenshot5 =>
       const AssetGenImage('assets/images/screenshot_5.jpg');
 
+  /// File path: assets/images/screenshot_6-min.jpg
+  AssetGenImage get screenshot6Min =>
+      const AssetGenImage('assets/images/screenshot_6-min.jpg');
+
   /// File path: assets/images/screenshot_6.jpg
   AssetGenImage get screenshot6 =>
       const AssetGenImage('assets/images/screenshot_6.jpg');
+
+  /// File path: assets/images/screenshot_7-min.jpg
+  AssetGenImage get screenshot7Min =>
+      const AssetGenImage('assets/images/screenshot_7-min.jpg');
 
   /// File path: assets/images/screenshot_7.jpg
   AssetGenImage get screenshot7 =>
       const AssetGenImage('assets/images/screenshot_7.jpg');
 
+  /// File path: assets/images/screenshot_8-min.jpg
+  AssetGenImage get screenshot8Min =>
+      const AssetGenImage('assets/images/screenshot_8-min.jpg');
+
   /// File path: assets/images/screenshot_8.jpg
   AssetGenImage get screenshot8 =>
       const AssetGenImage('assets/images/screenshot_8.jpg');
+
+  /// File path: assets/images/space-min.jpg
+  AssetGenImage get spaceMin =>
+      const AssetGenImage('assets/images/space-min.jpg');
 
   /// File path: assets/images/space.jpg
   AssetGenImage get space => const AssetGenImage('assets/images/space.jpg');
 
   /// List of all assets
   List<AssetGenImage> get values => [
+        backgroundBassieMin,
         backgroundBassie,
+        bassieMin,
         bassie,
+        bassie2Min,
         bassie2,
+        fietsenMin,
         fietsen,
+        natureMin,
         nature,
+        phoneMin,
         phone,
+        screenshot1Min,
         screenshot1,
+        screenshot2Min,
         screenshot2,
+        screenshot3Min,
         screenshot3,
+        screenshot4Min,
         screenshot4,
+        screenshot5Min,
         screenshot5,
+        screenshot6Min,
         screenshot6,
+        screenshot7Min,
         screenshot7,
+        screenshot8Min,
         screenshot8,
+        spaceMin,
         space
       ];
 }

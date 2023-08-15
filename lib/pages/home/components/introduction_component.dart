@@ -19,7 +19,7 @@ class IntroductionComponent extends StatelessWidget {
             children: [
               Flexible(
                 flex: 2,
-                child: Assets.images.bassie.image(
+                child: Assets.images.bassieMin.image(
                   fit: BoxFit.cover,
                 ),
               ),

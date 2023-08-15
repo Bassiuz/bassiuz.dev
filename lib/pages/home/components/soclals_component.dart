@@ -25,7 +25,7 @@ class SocialsComponent extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               height: double.infinity,
-              child: Assets.images.fietsen.image(
+              child: Assets.images.fietsenMin.image(
                 fit: BoxFit.cover,
                 alignment: Alignment.center,
                 color: Colors.black.withOpacity(0.7),

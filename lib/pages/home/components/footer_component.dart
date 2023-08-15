@@ -17,7 +17,7 @@ class FooterComponent extends StatelessWidget {
           SizedBox(
               width: double.infinity,
               height: double.infinity,
-              child: Assets.images.nature.image(
+              child: Assets.images.natureMin.image(
                 fit: BoxFit.cover,
                 alignment: Alignment.center,
                 color: Colors.black.withOpacity(0.4),

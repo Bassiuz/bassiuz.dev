@@ -20,7 +20,7 @@ class BlogCard extends StatelessWidget {
               AspectRatio(
                 aspectRatio: 3 / 2,
                 child: SizedBox(
-                    child: Assets.images.backgroundBassie.image(
+                    child: Assets.images.backgroundBassieMin.image(
                   fit: BoxFit.cover,
                 )),
               ),
