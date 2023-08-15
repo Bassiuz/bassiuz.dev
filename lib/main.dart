@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'config/routing/app_router.dart';
 import 'config/theme/bassiuz_dev_theme.dart';
+import 'gen/assets.gen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,6 +17,12 @@ class MyApp extends StatelessWidget {
   final _appRouter = AppRouter();
 
   MyApp({super.key});
+
+  void precacheImages(BuildContext context) {
+    for (var e in Assets.images.values) {
+      precacheImage(e.provider(), context);
+    }
+  }
 
   // This widget is the root of your application.
   @override

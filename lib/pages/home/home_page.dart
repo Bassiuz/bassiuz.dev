@@ -37,6 +37,7 @@ class _HomePageState extends State<HomePage> {
                   InheritedListView.maybeOf(ctx)?.scrollManager.visibleItems.add(resultModel.displayingChildIndexList);
                 },
                 child: ListView(
+                  cacheExtent: 1000000,
                   controller: InheritedListView.maybeOf(ctx)?.scrollManager.scrollController,
                   children: [
                     const BannerComponent(),
