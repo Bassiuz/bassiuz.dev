@@ -40930,12 +40930,12 @@ p=A.eD(A.a([q,A.bS(s,p.gf6(p),s),A.cZ("\ud83e\udd1d Let's create something amazi
 q=new A.bv(A.bk(a))
 return new A.bI(new A.aP(r,r,r,r),new A.fW(B.K,s,s,new A.hj(A.hx(A.a([new A.dI(3,B.aj,p,s),A.bS(s,s,q.gf6(q)),new A.dI(2,B.aj,B.wK.Aa(0,B.bY),s)],o),B.W,B.L),s),s),s)}}
 A.EK.prototype={
-J(a){var s,r=null,q=A.bS(B.wB.Ab(0,B.K,A.Z(102,0,0,0),B.fg,B.bY),1/0,1/0),p=A.eW(r,r,B.r,r,r,B.xa,r,r,r,r,r,r,r),o=new A.bv(A.bk(a))
+J(a){var s,r=null,q=A.bS(B.wJ.Ab(0,B.K,A.Z(102,0,0,0),B.fg,B.bY),1/0,1/0),p=A.eW(r,r,B.r,r,r,B.xa,r,r,r,r,r,r,r),o=new A.bv(A.bk(a))
 o=o.gf6(o)
 s=t.p
 return A.bS(A.jV(B.bh,A.a([q,p,A.kL(A.eD(A.a([new A.bI(new A.aP(o,o,o,o),A.cZ("Thank you for getting all the way to the bottom of the page \u2764\ufe0f",r,r,A.a2(a).p3.z.h5(B.h),B.bM),r),B.Jd,B.HA],s),B.bH,B.L),r,r)],s),B.bb),200,r)}}
 A.Fh.prototype={
-J(a){var s=null,r=new A.bv(A.bk(a)).gei(),q=B.wJ.Aa(0,B.bY),p=new A.bv(A.bk(a))
+J(a){var s=null,r=new A.bv(A.bk(a)).gei(),q=B.wA.Aa(0,B.bY),p=new A.bv(A.bk(a))
 return new A.bI(new A.aP(r,r,r,r),new A.fW(B.K,s,s,new A.hj(A.hx(A.a([new A.dI(2,B.aj,q,s),A.bS(s,s,p.gf6(p)),B.As],t.p),B.W,B.L),s),s),s)}}
 A.vs.prototype={
 ah(){return new A.Ng(B.j)}}
@@ -41024,7 +41024,7 @@ G(){return"Skill."+this.b}}
 A.J1.prototype={
 J(a){return new A.o0(new A.a4G(),6,null)}}
 A.a4G.prototype={
-$2(a,b){var s,r=null,q=t.w,p=A.bU(a,B.aI,q).w.a.a<400?300:220,o=A.bS(B.wA.Ab(0,B.K,A.Z(B.d.bo(178.5),0,0,0),B.fg,B.bY),1/0,1/0),n=new A.bv(A.bk(a)).gei(),m=A.cZ("Find me on",r,r,A.a2(a).p3.d.mb(B.h,B.ab),r),l=t.p,k=A.a([B.vE,new A.dI(1,B.aj,A.mb(r,r,r,B.b3,r,b?A.bk(a).c.b:0),r),B.vF],l)
+$2(a,b){var s,r=null,q=t.w,p=A.bU(a,B.aI,q).w.a.a<400?300:220,o=A.bS(B.wz.Ab(0,B.K,A.Z(B.d.bo(178.5),0,0,0),B.fg,B.bY),1/0,1/0),n=new A.bv(A.bk(a)).gei(),m=A.cZ("Find me on",r,r,A.a2(a).p3.d.mb(B.h,B.ab),r),l=t.p,k=A.a([B.vE,new A.dI(1,B.aj,A.mb(r,r,r,B.b3,r,b?A.bk(a).c.b:0),r),B.vF],l)
 if(!(A.bU(a,B.aI,q).w.a.a<400)){s=A.mb(r,r,r,B.b3,r,b?A.bk(a).c.b:0)
 B.b.H(k,A.c3([new A.dI(1,B.aj,s,r),B.i7,new A.dI(1,B.aj,A.mb(r,r,r,B.b3,r,b?A.bk(a).c.b:0),r),B.i6],t.l7))}k=A.a([A.hx(k,B.bH,B.L)],l)
 if(A.bU(a,B.aI,q).w.a.a<400){q=A.bS(r,new A.bv(A.bk(a)).gei(),r)
@@ -41044,7 +41044,7 @@ s=A.a([B.wM,A.bS(o,new A.bv(A.bk(s)).gei(),o),B.Bd,A.bS(o,new A.bv(A.bk(s)).gqc(
 q=A.aG([null,0],t.LO,t.S)
 p=n==null&&!0
 p=p?B.wq:o
-return A.jV(B.bh,A.a([new A.px(new A.Fz(new A.a4y(!0,!0,!0,s,q),o,B.aJ,!1,n,o,p,!1,1e6,15,B.aD,B.HO,o,B.au,o),o,o,o,new A.a9w(a),0,o,1,o,B.Gb,o,o,o),B.FW],r),B.bb)},
+return A.jV(B.bh,A.a([new A.px(new A.Fz(new A.a4y(!0,!0,!0,s,q),o,B.aJ,!1,n,o,p,!1,o,15,B.aD,B.HO,o,B.au,o),o,o,o,new A.a9w(a),0,o,1,o,B.Gb,o,o,o),B.FW],r),B.bb)},
 $S:416}
 A.a9w.prototype={
 $1(a){var s=this.a.an(t.i3)
@@ -55776,8 +55776,8 @@ if(s.b!=null)r.K(0,s.gu6())
 s.a8=b
 if(s.b!=null)b.Z(0,s.gu6())
 s.U()},
-sa3m(a){if(a===this.aH)return
-this.aH=a
+sa3m(a){if(250===this.aH)return
+this.aH=250
 this.U()},
 sa3n(a){if(a===this.a3)return
 this.a3=a
@@ -69530,7 +69530,7 @@ A.AE.prototype={
 bR(a){return this.f!==a.f}}
 A.xS.prototype={
 ar(a){var s=this,r=s.e,q=A.amC(a,r),p=A.ai()
-r=new A.wy(s.r,r,q,s.w,s.y,B.jj,s.Q,p,0,null,null,A.ai())
+r=new A.wy(s.r,r,q,s.w,250,B.jj,s.Q,p,0,null,null,A.ai())
 r.au()
 r.H(0,null)
 q=r.a6$
@@ -72569,19 +72569,19 @@ B.wx=new A.ox(2,"paused")
 B.wy=new A.ox(3,"detached")
 B.fe=new A.tg(0,"polite")
 B.ff=new A.tg(1,"assertive")
-B.wz=new A.e0("assets/images/screenshot_1-min.jpeg")
-B.wA=new A.e0("assets/images/fietsen-min.jpg")
-B.wB=new A.e0("assets/images/nature-min.jpg")
-B.wC=new A.e0("assets/images/screenshot_2-min.jpg")
-B.wD=new A.e0("assets/images/screenshot_3-min.jpg")
-B.wE=new A.e0("assets/images/screenshot_4-min.jpg")
-B.wF=new A.e0("assets/images/screenshot_5-min.jpg")
-B.wG=new A.e0("assets/images/screenshot_6-min.jpg")
-B.wH=new A.e0("assets/images/screenshot_7-min.jpg")
-B.wI=new A.e0("assets/images/screenshot_8-min.jpg")
-B.wJ=new A.e0("assets/images/bassie-min.jpeg")
-B.iQ=new A.e0("assets/images/background_bassie-min.jpg")
-B.wK=new A.e0("assets/images/bassie2-min.jpg")
+B.iQ=new A.e0("assets/images/background_bassie-min-min.jpg")
+B.wz=new A.e0("assets/images/fietsen-min-min.jpg")
+B.wA=new A.e0("assets/images/bassie-min-min.jpg")
+B.wB=new A.e0("assets/images/screenshot_1-min-min.jpg")
+B.wC=new A.e0("assets/images/screenshot_2-min-min.jpg")
+B.wD=new A.e0("assets/images/screenshot_3-min-min.jpg")
+B.wE=new A.e0("assets/images/screenshot_4-min-min.jpg")
+B.wF=new A.e0("assets/images/screenshot_5-min-min.jpg")
+B.wG=new A.e0("assets/images/screenshot_6-min-min.jpg")
+B.wH=new A.e0("assets/images/screenshot_7-min-min.jpg")
+B.wI=new A.e0("assets/images/screenshot_8-min-min.jpg")
+B.wJ=new A.e0("assets/images/nature-min-min.jpg")
+B.wK=new A.e0("assets/images/bassie2-min-min.jpg")
 B.x=new A.oB(0,"up")
 B.ae=new A.oB(1,"right")
 B.v=new A.oB(2,"down")
@@ -75723,7 +75723,7 @@ return q})
 s($,"aDA","d_",()=>A.asC(A.akY(A.a([1],t.t)).buffer).getInt8(0)===1?B.X:B.j0)
 s($,"aGR","SQ",()=>new A.Uc(A.y(t.N,A.a3("k7"))))
 s($,"aH5","aiP",()=>new A.H4())
-r($,"aH9","afs",()=>A.a([B.wz,B.wC,B.wD,B.wE,B.wF,B.wG,B.wH,B.wI],A.a3("v<e0>")))
+r($,"aH9","afs",()=>A.a([B.wB,B.wC,B.wD,B.wE,B.wF,B.wG,B.wH,B.wI],A.a3("v<e0>")))
 s($,"aG8","ar4",()=>A.fn(B.eu,B.i,t.EP))
 s($,"aG1","aqY",()=>A.fn(B.i,B.Gi,t.EP))
 r($,"aF0","aqj",()=>A.ath(B.PZ,B.PY))
