@@ -44,7 +44,7 @@ class ConfessionalComponent extends StatelessWidget {
               ),
               Flexible(
                 flex: 2,
-                child: Assets.images.bassie.image(
+                child: Assets.images.bassie2.image(
                   fit: BoxFit.cover,
                 ),
               ),
