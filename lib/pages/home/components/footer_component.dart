@@ -20,7 +20,7 @@ class FooterComponent extends StatelessWidget {
               child: Assets.images.nature.image(
                 fit: BoxFit.cover,
                 alignment: Alignment.center,
-                color: Colors.black.withOpacity(0.7),
+                color: Colors.black.withOpacity(0.4),
                 colorBlendMode: BlendMode.darken,
               )),
           Container(
