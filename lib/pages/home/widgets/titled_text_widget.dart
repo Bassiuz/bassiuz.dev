@@ -24,11 +24,12 @@ class TiltedTextWidget extends StatelessWidget {
         ),
         const Divider(),
         Text(
-          'Lorum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-          style: context.theme.textTheme.bodySmall,
-        ),
-        Text(
-          'Lorum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.',
+          '''Welcome to my digital realm, where code and creativity converge! I'm Bas de Vaan, a passionate Flutter developer on a mission to weave digital magic into every mobile experience. 
+          
+With over 10 years of (app) development experience, I'm here to teach and help you turn your app dreams into captivating reality.
+
+But that's not all – beyond the lines of code, I'm a self-proclaimed Magic: the Gathering sorcerer with a penchant for mastering off-grid strategies. By day, you'll find me conjuring elegant Flutter solutions at Dutch Coding Company, where I'm constantly pushing the boundaries of what's possible in mobile development.
+          ''',
           style: context.theme.textTheme.bodySmall,
         ),
       ],
