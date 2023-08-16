@@ -77,7 +77,7 @@ class _ScreenshotCarrouselState extends State<ScreenshotCarrousel> with SingleTi
         child: OverflowBox(
           alignment: Alignment.centerLeft,
           maxWidth: (screenshotWidth) * 10,
-          maxHeight: 600,
+          maxHeight: 800,
           child: Row(
             children: <Widget>[
               SizedBox(

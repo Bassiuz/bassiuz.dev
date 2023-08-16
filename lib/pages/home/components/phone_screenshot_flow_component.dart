@@ -14,46 +14,6 @@ class PhoneScreenshotFlowComponent extends StatelessWidget {
       width: double.infinity,
       child: Stack(
         children: [
-          Container(
-            height: double.infinity,
-            width: double.infinity,
-            color: Colors.black,
-          ),
-          Column(
-            children: [
-              Flexible(
-                flex: 1,
-                child: Container(
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [
-                        Colors.white,
-                        Colors.black,
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              const Spacer(flex: 2),
-              Flexible(
-                flex: 1,
-                child: Container(
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [
-                        Colors.black,
-                        Colors.white,
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
           const ScreenshotCarrousel(),
           Container(
               color: Colors.black38,
@@ -69,41 +29,6 @@ class PhoneScreenshotFlowComponent extends StatelessWidget {
                   ),
                 ),
               )),
-          Column(
-            children: [
-              Flexible(
-                flex: 1,
-                child: Container(
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [
-                        Colors.white,
-                        Colors.transparent,
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              const Spacer(flex: 2),
-              Flexible(
-                flex: 1,
-                child: Container(
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [
-                        Colors.transparent,
-                        Colors.white,
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
         ],
       ),
     );
