@@ -237,8 +237,8 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: "feature/improve-playground"
-      resolved-ref: e1d57a8d70563ee0cb0032c967d5df23a17e1caf
+      ref: "feature/performance-upgrade"
+      resolved-ref: "315d3a8184629c1446b58923b3caf8ec11994240"
       url: "https://github.com/DutchCodingCompany/fluid_ui_design.git"
     source: git
     version: "0.0.1-beta.1"
