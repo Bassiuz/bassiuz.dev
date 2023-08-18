@@ -193,6 +193,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/bassie2.jpg
   AssetGenImage get bassie2 => const AssetGenImage('assets/images/bassie2.jpg');
 
+  /// File path: assets/images/favicon.png
+  AssetGenImage get favicon => const AssetGenImage('assets/images/favicon.png');
+
   /// File path: assets/images/fietsen-min-min.jpg
   AssetGenImage get fietsenMinMin =>
       const AssetGenImage('assets/images/fietsen-min-min.jpg');
@@ -344,6 +347,7 @@ class $AssetsImagesGen {
         bassie2MinMin,
         bassie2Min,
         bassie2,
+        favicon,
         fietsenMinMin,
         fietsenMin,
         fietsen,
