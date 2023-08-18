@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/extensions/context_extension.dart';
+import '../extensions/context_extension.dart';
 
 class TiltedTextWidget extends StatelessWidget {
   const TiltedTextWidget({super.key});

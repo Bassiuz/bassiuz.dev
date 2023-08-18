@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 
 import '../../../core/extensions/breakpoint_extension.dart';
-import '../widgets/grid.dart';
-import '../widgets/max_width_wrapper.dart';
-import '../widgets/skill_card.dart';
-import '../widgets/visible_widget.dart';
+import '../../../core/widgets/grid.dart';
+import '../../../core/widgets/max_width_wrapper.dart';
+import '../../../core/widgets/skill_card.dart';
+import '../../../core/widgets/visible_widget.dart';
 
 class SkillGridComponent extends StatelessWidget {
   const SkillGridComponent({super.key, required this.indexInScroll});

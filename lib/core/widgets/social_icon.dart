@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../../../core/extensions/context_extension.dart';
+import '../extensions/context_extension.dart';
 import 'circle_hover_inkwell.dart';
 
 class SocialIcon extends StatelessWidget {

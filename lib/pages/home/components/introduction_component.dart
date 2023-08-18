@@ -1,9 +1,9 @@
 import 'package:fluid_ui_design/fluid_ui_design.dart';
 import 'package:flutter/material.dart';
 
+import '../../../core/widgets/max_width_wrapper.dart';
+import '../../../core/widgets/titled_text_widget.dart';
 import '../../../gen/assets.gen.dart';
-import '../widgets/max_width_wrapper.dart';
-import '../widgets/titled_text_widget.dart';
 
 class IntroductionComponent extends StatelessWidget {
   const IntroductionComponent({super.key});

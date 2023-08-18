@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 
 import '../../../core/extensions/breakpoint_extension.dart';
 import '../../../core/extensions/context_extension.dart';
+import '../../../core/widgets/max_width_wrapper.dart';
+import '../../../core/widgets/social_icon.dart';
+import '../../../core/widgets/visible_widget.dart';
 import '../../../gen/assets.gen.dart';
-import '../widgets/max_width_wrapper.dart';
-import '../widgets/social_icon.dart';
-import '../widgets/visible_widget.dart';
 
 class SocialsComponent extends StatelessWidget {
   const SocialsComponent({super.key, required this.indexInScroll});

@@ -1,8 +1,10 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:fluid_ui_design/fluid_ui_design.dart';
 import 'package:flutter/material.dart';
 
-import '../../../core/extensions/context_extension.dart';
-import '../../../gen/assets.gen.dart';
+import '../../config/routing/app_router.gr.dart';
+import '../../gen/assets.gen.dart';
+import '../extensions/context_extension.dart';
 
 class BlogCard extends StatelessWidget {
   const BlogCard({super.key});
@@ -12,7 +14,7 @@ class BlogCard extends StatelessWidget {
     return Flexible(
       child: InkWell(
         borderRadius: BorderRadius.circular(context.fluid.spaces.s),
-        onTap: () => {},
+        onTap: () => context.router.push(BlogpostRoute(blogSlug: 'blog')),
         child: Padding(
           padding: EdgeInsets.all(context.fluid.spaces.s),
           child: Column(

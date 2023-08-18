@@ -2,8 +2,8 @@ import 'package:fluid_ui_design/fluid_ui_design.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/extensions/context_extension.dart';
+import '../../../core/widgets/max_width_wrapper.dart';
 import '../../../gen/assets.gen.dart';
-import '../widgets/max_width_wrapper.dart';
 
 class ConfessionalComponent extends StatelessWidget {
   const ConfessionalComponent({super.key});

@@ -6,8 +6,8 @@ import 'package:ionicons/ionicons.dart';
 
 import '../../../core/extensions/breakpoint_extension.dart';
 import '../../../core/extensions/context_extension.dart';
-import '../widgets/circle_hover_inkwell.dart';
-import '../widgets/scrolling/inherited_list_view.dart';
+import '../../../core/widgets/circle_hover_inkwell.dart';
+import '../../../core/widgets/scrolling/inherited_list_view.dart';
 
 class MenuBarComponent extends StatefulWidget {
   const MenuBarComponent({super.key});

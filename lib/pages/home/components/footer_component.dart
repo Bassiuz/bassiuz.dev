@@ -2,8 +2,8 @@ import 'package:fluid_ui_design/fluid_ui_design.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/extensions/context_extension.dart';
+import '../../../core/widgets/social_icon.dart';
 import '../../../gen/assets.gen.dart';
-import '../widgets/social_icon.dart';
 
 class FooterComponent extends StatelessWidget {
   const FooterComponent({super.key});

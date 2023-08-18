@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:fluid_ui_design/fluid_ui_design.dart';
 import 'package:flutter/material.dart';
 
-import '../../../gen/assets.gen.dart';
+import '../../gen/assets.gen.dart';
 import 'screenshot_card_widget.dart';
 
 class ScreenshotCarrousel extends StatefulWidget {

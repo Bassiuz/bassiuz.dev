@@ -3,7 +3,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-import '../../../core/extensions/context_extension.dart';
+import '../extensions/context_extension.dart';
 
 class AnimatedText extends StatefulWidget {
   const AnimatedText({super.key});

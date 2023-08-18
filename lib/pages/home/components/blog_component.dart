@@ -2,9 +2,9 @@ import 'package:fluid_ui_design/fluid_ui_design.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/extensions/context_extension.dart';
-import '../widgets/blog_card.dart';
-import '../widgets/max_width_wrapper.dart';
-import '../widgets/visible_widget.dart';
+import '../../../core/widgets/blog_card.dart';
+import '../../../core/widgets/max_width_wrapper.dart';
+import '../../../core/widgets/visible_widget.dart';
 
 class BlogComponent extends StatelessWidget {
   const BlogComponent({super.key, required this.indexInScroll});

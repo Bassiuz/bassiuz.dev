@@ -2,8 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-import '../../../core/sizes.dart';
-import '../../../gen/assets.gen.dart';
+import '../../gen/assets.gen.dart';
+import '../sizes.dart';
 import 'edge_painter.dart';
 
 class EdgedBanner extends StatelessWidget {

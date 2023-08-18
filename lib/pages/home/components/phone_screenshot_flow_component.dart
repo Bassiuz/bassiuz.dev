@@ -2,7 +2,7 @@ import 'package:fluid_ui_design/fluid_ui_design.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/extensions/context_extension.dart';
-import '../widgets/screenshot_carrousel.dart';
+import '../../../core/widgets/screenshot_carrousel.dart';
 
 class PhoneScreenshotFlowComponent extends StatelessWidget {
   const PhoneScreenshotFlowComponent({super.key});

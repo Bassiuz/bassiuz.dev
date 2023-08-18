@@ -1,7 +1,7 @@
 import 'package:fluid_ui_design/fluid_ui_design.dart';
 import 'package:flutter/material.dart';
 
-import '../components/skill_grid_component.dart';
+import '../../pages/home/components/skill_grid_component.dart';
 
 class SkillCard extends StatelessWidget {
   const SkillCard({

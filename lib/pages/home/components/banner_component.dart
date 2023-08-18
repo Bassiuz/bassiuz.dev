@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../core/extensions/context_extension.dart';
 import '../../../core/sizes.dart';
-import '../widgets/animated_text.dart';
-import '../widgets/edged_banner.dart';
+import '../../../core/widgets/animated_text.dart';
+import '../../../core/widgets/edged_banner.dart';
 
 class BannerComponent extends StatelessWidget {
   const BannerComponent({super.key});
@@ -24,7 +24,7 @@ class BannerComponent extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Welcome',
+                        'Welcome!',
                         style: context.theme.textTheme.displaySmall,
                         textAlign: TextAlign.center,
                       ),

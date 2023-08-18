@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/scrolling/inherited_list_view.dart';
+import 'scrolling/inherited_list_view.dart';
 
 class VisibleWidgetBuilder extends StatefulWidget {
   const VisibleWidgetBuilder({
