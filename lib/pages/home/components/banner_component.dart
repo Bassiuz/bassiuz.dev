@@ -4,6 +4,7 @@ import '../../../core/extensions/context_extension.dart';
 import '../../../core/sizes.dart';
 import '../../../core/widgets/animated_text.dart';
 import '../../../core/widgets/edged_banner.dart';
+import '../../../gen/assets.gen.dart';
 
 class BannerComponent extends StatelessWidget {
   const BannerComponent({super.key});
@@ -14,7 +15,7 @@ class BannerComponent extends StatelessWidget {
       height: MediaQuery.sizeOf(context).height * 0.7,
       child: Stack(
         children: [
-          const EdgedBanner(),
+          const EdgedBanner(bannerImage: AssetGenImage('assets/images/background_bassie-min-min.jpg'), darken: true),
           Align(
               alignment: Alignment.center,
               child: Padding(

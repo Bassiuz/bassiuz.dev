@@ -7,7 +7,10 @@ import '../sizes.dart';
 import 'edge_painter.dart';
 
 class EdgedBanner extends StatelessWidget {
-  const EdgedBanner({super.key});
+  const EdgedBanner({super.key, required this.bannerImage, this.darken});
+
+  final AssetGenImage bannerImage;
+  final bool? darken;
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +22,10 @@ class EdgedBanner extends StatelessWidget {
           child: SizedBox(
               width: double.infinity,
               height: double.infinity,
-              child: Assets.images.backgroundBassieMinMin.image(
+              child: bannerImage.image(
                 fit: BoxFit.cover,
                 alignment: Alignment.center,
-                color: Colors.black.withOpacity(0.7),
+                color: darken == null || darken == true ? Colors.black.withOpacity(0.7) : null,
                 colorBlendMode: BlendMode.darken,
               )),
         ),
