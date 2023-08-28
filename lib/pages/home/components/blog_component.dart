@@ -1,10 +1,12 @@
 import 'package:fluid_ui_design/fluid_ui_design.dart';
 import 'package:flutter/material.dart';
 
+import '../../../config/routing/app_router.gr.dart';
 import '../../../core/extensions/context_extension.dart';
 import '../../../core/widgets/blog_card.dart';
 import '../../../core/widgets/max_width_wrapper.dart';
 import '../../../core/widgets/visible_widget.dart';
+import '../../blogpost/blog.dart';
 
 class BlogComponent extends StatelessWidget {
   const BlogComponent({super.key, required this.indexInScroll});
@@ -27,22 +29,22 @@ class BlogComponent extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    const BlogCard(),
+                    BlogCard(blog: Blog.values.first),
                     AnimatedContainer(
                       width: visible ? context.fluid.space.from.zero.to.m : 100,
                       duration: const Duration(milliseconds: 200),
                     ),
-                    const BlogCard(),
+                    BlogCard(blog: Blog.values.first),
                     AnimatedContainer(
                       width: visible ? context.fluid.space.from.zero.to.m : 100,
                       duration: const Duration(milliseconds: 200),
                     ),
-                    const BlogCard(),
+                    BlogCard(blog: Blog.values.first),
                   ],
                 ),
                 InkWell(
                   borderRadius: BorderRadius.circular(1337),
-                  onTap: () => {},
+                  onTap: context.navigateToRouteIfNotOnRoute(const BlogsRoute()),
                   child: const Padding(
                     padding: EdgeInsets.all(8.0),
                     child: Text('Read More ...', style: TextStyle(color: Colors.blue)),

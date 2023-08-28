@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class Grid extends StatelessWidget {
@@ -18,7 +20,10 @@ class Grid extends StatelessWidget {
           for (int i = 0; i < children.length; i += crossAxisCount)
             Row(
               mainAxisSize: MainAxisSize.min,
-              children: children.sublist(i, i + crossAxisCount).toList(),
+              children: children
+                  .sublist(
+                      i, i + min(children.length - ((i / crossAxisCount).floor() * crossAxisCount), i + crossAxisCount))
+                  .toList(),
             ),
         ],
       ),
