@@ -39,6 +39,34 @@ class _MenuBarComponentState extends State<MenuBarComponent> {
     super.didChangeDependencies();
   }
 
+  Future<void> _dialogCommingSoonBuilder(BuildContext context) {
+    return showDialog<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Playground'),
+          content: const Text(
+            'Oops, you\'ve found a feature not implemented yet!\n'
+            'In the future this will lead to my playground page\n'
+            'where I will post all kinds of code samples and demos to play around with \n'
+            'Make sure to return soon to check it out!',
+          ),
+          actions: <Widget>[
+            TextButton(
+              style: TextButton.styleFrom(
+                textStyle: Theme.of(context).textTheme.labelLarge,
+              ),
+              child: const Text('I\'ll come back soon!'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return AnimatedOpacity(
@@ -87,7 +115,7 @@ class _MenuBarComponentState extends State<MenuBarComponent> {
                           ),
                           SizedBox(width: context.fluid.spaces.m),
                           CircleHoverInkwell(
-                            onClick: () => {},
+                            onClick: () => _dialogCommingSoonBuilder(context),
                             child: Padding(
                               padding: EdgeInsets.symmetric(horizontal: context.fluid.spaces.s),
                               child: Text(
@@ -127,7 +155,7 @@ class _MenuBarComponentState extends State<MenuBarComponent> {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         CircleHoverInkwell(
-                          onClick: () => {},
+                          onClick: context.navigateToRouteIfNotOnRoute(const BlogsRoute()),
                           child: Padding(
                             padding: EdgeInsets.symmetric(horizontal: context.fluid.spaces.s),
                             child: Text(
@@ -138,7 +166,7 @@ class _MenuBarComponentState extends State<MenuBarComponent> {
                           ),
                         ),
                         CircleHoverInkwell(
-                          onClick: () => {},
+                          onClick: () => _dialogCommingSoonBuilder(context),
                           child: Padding(
                             padding: EdgeInsets.symmetric(horizontal: context.fluid.spaces.s),
                             child: Text(
