@@ -8,20 +8,27 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i3;
-import 'package:bassiuz_dev/pages/blogpost/blogpost_page.dart' as _i2;
+import 'package:auto_route/auto_route.dart' as _i4;
+import 'package:bassiuz_dev/pages/blogpost/blogpost_page.dart' as _i3;
+import 'package:bassiuz_dev/pages/blogs/blogs_page.dart' as _i2;
 import 'package:bassiuz_dev/pages/home/home_page.dart' as _i1;
-import 'package:flutter/material.dart' as _i4;
+import 'package:flutter/material.dart' as _i5;
 
-abstract class $AppRouter extends _i3.RootStackRouter {
+abstract class $AppRouter extends _i4.RootStackRouter {
   $AppRouter({super.navigatorKey});
 
   @override
-  final Map<String, _i3.PageFactory> pagesMap = {
+  final Map<String, _i4.PageFactory> pagesMap = {
     HomeRoute.name: (routeData) {
-      return _i3.AutoRoutePage<dynamic>(
+      return _i4.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i1.HomePage(),
+      );
+    },
+    BlogsRoute.name: (routeData) {
+      return _i4.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i2.BlogsPage(),
       );
     },
     BlogpostRoute.name: (routeData) {
@@ -29,9 +36,9 @@ abstract class $AppRouter extends _i3.RootStackRouter {
       final args = routeData.argsAs<BlogpostRouteArgs>(
           orElse: () =>
               BlogpostRouteArgs(blogSlug: pathParams.getString('blogSlug')));
-      return _i3.AutoRoutePage<dynamic>(
+      return _i4.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i2.BlogpostPage(
+        child: _i3.BlogpostPage(
           key: args.key,
           blogSlug: args.blogSlug,
         ),
@@ -42,8 +49,8 @@ abstract class $AppRouter extends _i3.RootStackRouter {
 
 /// generated route for
 /// [_i1.HomePage]
-class HomeRoute extends _i3.PageRouteInfo<void> {
-  const HomeRoute({List<_i3.PageRouteInfo>? children})
+class HomeRoute extends _i4.PageRouteInfo<void> {
+  const HomeRoute({List<_i4.PageRouteInfo>? children})
       : super(
           HomeRoute.name,
           initialChildren: children,
@@ -51,16 +58,30 @@ class HomeRoute extends _i3.PageRouteInfo<void> {
 
   static const String name = 'HomeRoute';
 
-  static const _i3.PageInfo<void> page = _i3.PageInfo<void>(name);
+  static const _i4.PageInfo<void> page = _i4.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i2.BlogpostPage]
-class BlogpostRoute extends _i3.PageRouteInfo<BlogpostRouteArgs> {
+/// [_i2.BlogsPage]
+class BlogsRoute extends _i4.PageRouteInfo<void> {
+  const BlogsRoute({List<_i4.PageRouteInfo>? children})
+      : super(
+          BlogsRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'BlogsRoute';
+
+  static const _i4.PageInfo<void> page = _i4.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i3.BlogpostPage]
+class BlogpostRoute extends _i4.PageRouteInfo<BlogpostRouteArgs> {
   BlogpostRoute({
-    _i4.Key? key,
+    _i5.Key? key,
     required String blogSlug,
-    List<_i3.PageRouteInfo>? children,
+    List<_i4.PageRouteInfo>? children,
   }) : super(
           BlogpostRoute.name,
           args: BlogpostRouteArgs(
@@ -73,8 +94,8 @@ class BlogpostRoute extends _i3.PageRouteInfo<BlogpostRouteArgs> {
 
   static const String name = 'BlogpostRoute';
 
-  static const _i3.PageInfo<BlogpostRouteArgs> page =
-      _i3.PageInfo<BlogpostRouteArgs>(name);
+  static const _i4.PageInfo<BlogpostRouteArgs> page =
+      _i4.PageInfo<BlogpostRouteArgs>(name);
 }
 
 class BlogpostRouteArgs {
@@ -83,7 +104,7 @@ class BlogpostRouteArgs {
     required this.blogSlug,
   });
 
-  final _i4.Key? key;
+  final _i5.Key? key;
 
   final String blogSlug;
 

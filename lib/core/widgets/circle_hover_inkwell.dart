@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CircleHoverInkwell extends StatefulWidget {
   const CircleHoverInkwell({super.key, required this.onClick, required this.child});
 
-  final VoidCallback onClick;
+  final VoidCallback? onClick;
   final Widget child;
 
   @override

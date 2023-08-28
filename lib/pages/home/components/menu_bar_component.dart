@@ -4,6 +4,7 @@ import 'package:fluid_ui_design/fluid_ui_design.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 
+import '../../../config/routing/app_router.gr.dart';
 import '../../../core/extensions/breakpoint_extension.dart';
 import '../../../core/extensions/context_extension.dart';
 import '../../../core/widgets/circle_hover_inkwell.dart';
@@ -61,7 +62,7 @@ class _MenuBarComponentState extends State<MenuBarComponent> {
                     child: Row(
                       children: [
                         CircleHoverInkwell(
-                          onClick: () => {},
+                          onClick: context.navigateToRouteIfNotOnRoute(const HomeRoute()),
                           child: Padding(
                             padding: EdgeInsets.symmetric(horizontal: context.fluid.spaces.s),
                             child: Text(
@@ -74,7 +75,7 @@ class _MenuBarComponentState extends State<MenuBarComponent> {
                         const Spacer(),
                         if (!context.verySmall) ...{
                           CircleHoverInkwell(
-                            onClick: () => {},
+                            onClick: context.navigateToRouteIfNotOnRoute(const BlogsRoute()),
                             child: Padding(
                               padding: EdgeInsets.symmetric(horizontal: context.fluid.spaces.s),
                               child: Text(
