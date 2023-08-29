@@ -65,6 +65,7 @@ class _BlogsPageState extends State<BlogsPage> {
                   crossAxisCount: 3,
                   children: [
                     ...Blog.values.map((e) => BlogCard(blog: e)).toList(),
+                    ...List.generate(3 - Blog.values.length % 3, (index) => const Flexible(child: SizedBox.shrink()))
                   ],
                 ),
                 Blog.values.length > (maxAmountOfRows * 3)
