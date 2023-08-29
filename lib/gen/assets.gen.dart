@@ -12,6 +12,8 @@ import 'package:flutter/widgets.dart';
 class $AssetsBlogpostGen {
   const $AssetsBlogpostGen();
 
+  $AssetsBlogpostDevelopingAlibiGen get developingAlibi =>
+      const $AssetsBlogpostDevelopingAlibiGen();
   $AssetsBlogpostFluidUiGen get fluidUi => const $AssetsBlogpostFluidUiGen();
 }
 
@@ -403,6 +405,25 @@ class $AssetsImagesGen {
         spaceMin,
         space
       ];
+}
+
+class $AssetsBlogpostDevelopingAlibiGen {
+  const $AssetsBlogpostDevelopingAlibiGen();
+
+  /// File path: assets/blogpost/developing-alibi/alibi-laptop.jpg
+  AssetGenImage get alibiLaptop =>
+      const AssetGenImage('assets/blogpost/developing-alibi/alibi-laptop.jpg');
+
+  /// File path: assets/blogpost/developing-alibi/alibi-phone.jpg
+  AssetGenImage get alibiPhone =>
+      const AssetGenImage('assets/blogpost/developing-alibi/alibi-phone.jpg');
+
+  /// File path: assets/blogpost/developing-alibi/header-bas.jpg
+  AssetGenImage get headerBas =>
+      const AssetGenImage('assets/blogpost/developing-alibi/header-bas.jpg');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [alibiLaptop, alibiPhone, headerBas];
 }
 
 class $AssetsBlogpostFluidUiGen {

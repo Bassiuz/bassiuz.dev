@@ -33,7 +33,12 @@ class BlogCard extends StatelessWidget {
                 child: Wrap(
                   alignment: WrapAlignment.spaceBetween,
                   children: [
-                    Text(blog.title, style: context.theme.textTheme.headlineSmall),
+                    Text(
+                      '${blog.title}\n\n',
+                      style: context.theme.textTheme.bodyLarge,
+                      maxLines: 3,
+                      overflow: TextOverflow.ellipsis,
+                    ),
                     Text(blog.publicationDate,
                         style: context.theme.textTheme.bodySmall!.copyWith(
                           color: Colors.black54,
