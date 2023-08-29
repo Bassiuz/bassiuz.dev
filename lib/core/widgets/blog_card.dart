@@ -34,7 +34,7 @@ class BlogCard extends StatelessWidget {
                   alignment: WrapAlignment.spaceBetween,
                   children: [
                     Text(blog.title, style: context.theme.textTheme.headlineSmall),
-                    Text('12 / 12 / 2023',
+                    Text(blog.publicationDate,
                         style: context.theme.textTheme.bodySmall!.copyWith(
                           color: Colors.black54,
                           fontStyle: FontStyle.italic,

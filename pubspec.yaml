@@ -10,12 +10,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  auto_route: ^6.3.0
+  auto_route: ^7.8.3
   fluid_ui_design:
     git:
       url: https://github.com/DutchCodingCompany/fluid_ui_design.git
       ref: feature/performance-upgrade # branch name
-  google_fonts: ^4.0.5
+  google_fonts: ^5.1.0
   scrollview_observer: ^1.16.1
   ionicons: ^0.2.2
   url_launcher: ^6.1.12
@@ -31,7 +31,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  auto_route_generator: ^6.2.0
+  auto_route_generator: ^7.3.1
   flutter_lints: ^2.0.0
   build_runner: ^2.3.3
   flutter_gen_runner: ^5.3.1

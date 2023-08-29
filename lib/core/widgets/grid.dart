@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 class Grid extends StatelessWidget {
@@ -17,12 +15,14 @@ class Grid extends StatelessWidget {
     return Center(
       child: Column(
         children: [
-          for (int i = 0; i < children.length; i += crossAxisCount)
+          for (int row = 0; row < (children.length / crossAxisCount).ceil(); row++)
             Row(
               mainAxisSize: MainAxisSize.min,
               children: children
                   .sublist(
-                      i, i + min(children.length - ((i / crossAxisCount).floor() * crossAxisCount), i + crossAxisCount))
+                    row * crossAxisCount,
+                    (row + 1) * crossAxisCount < children.length ? (row + 1) * crossAxisCount : children.length,
+                  )
                   .toList(),
             ),
         ],
