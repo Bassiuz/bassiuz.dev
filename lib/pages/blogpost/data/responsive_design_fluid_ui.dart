@@ -20,7 +20,6 @@ We’ve been thinking about how to solve this problem. We encounter a lot of pro
 A bit by accident we stumbled on https://utopia.fyi. This is a design paradigm where designers work with sizings that have a value in comparison to the width of the screen, and developers can implement these variable sizings in their app. We were quite interested in the idea, and wanted to try it out. My fellow colleague Niels had a nice fluid setup up and running really quickly, and from that point on we expanded on it to a point of where we are able to release the first beta version of our opensource implementation of Utopia for Flutter; Fluid UI!
 
 But lets step back a bit and look at what design principles are most important to us (don’t worry fellow codejunkies, we will get into the actual package later on!) 
-<br/><br/>
 
 ‌‌ 
 
