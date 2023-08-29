@@ -16,7 +16,7 @@ For the tool to be functional, it needs to load a lot of data from the user to g
 Because this tool is so focused on putting in and managing a lot of hours, it is mainly going to be used on desktop computers.
 
 ‌‌ 
-![Alibi Desktop](assets/blogpost/developing-alibi/alibi-laptop.jpg)
+![Alibi Desktop](assets/assets/blogpost/developing-alibi/alibi-laptop.jpg)
 
 ‌‌ 
 ## Why Flutter?
@@ -90,7 +90,7 @@ While this will not be the case for most apps, and we had to do some compromises
 This would not be possible if we chose to build the app in a web framework in the first place.
 
 ‌‌ 
-![Alibi Phone](assets/blogpost/developing-alibi/alibi-phone.jpg)
+![Alibi Phone](assets/assets/blogpost/developing-alibi/alibi-phone.jpg)
 
 ‌‌ 
 ## Conclusion: What Would We Do Now?

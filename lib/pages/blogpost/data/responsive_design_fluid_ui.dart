@@ -71,7 +71,7 @@ So instead of using a linear scale, we use an exponential scale for typography, 
 
 If you are a designer and want to try this, you actually can! There is a [Figma plugin developed by the team of Utopia to help you implement this way of designing apps.](https://utopia.fyi/blog/get-started-with-utopia-figma-plugins) This plugin helps you with setting up the configuration of the scales, and in reusing all sizings of spaces and typography! There is even a Kickstarter project available to start your design with.
 
-![Untitled](assets/blogpost/fluid-ui/utopia.png)
+![Untitled](assets/assets/blogpost/fluid-ui/utopia.png)
 
 If you want to know more about Utopia you should really check out their site https://utopia.fyi. I especially liked their YouTube video’s, as they explained the problem and solution to it very well.  Let’s move over to the technical part!
 
@@ -177,7 +177,7 @@ This function will return a TextStyle that can be put in a Text widget as shown 
 
 ### Playground
 
-![ezgif.com-optimize.gif](assets/blogpost/fluid-ui/demo.gif)
+![ezgif.com-optimize.gif](assets/assets/blogpost/fluid-ui/demo.gif)
 
 We wanted to have a nice demo app to play around with, see some different type scales and fonts; and that is why we added the FluidUI Playground as the example app to the GitHub repository. You can check it out yourself or just check on [our web app online!](https://fluid.basdevaan.nl) In this playground you can set your own settings and see how a basic layout is impacted by screen size changes and configuration changes. You can later use these exact configuration in your own project. If you want to see the code for this playground, you can check it in the [example app on Github](https://github.com/DutchCodingCompany/fluid_ui_design/tree/main/example)!
 
