@@ -26,6 +26,7 @@ class BlogpostPage extends StatelessWidget {
         height: MediaQuery.sizeOf(context).height * 0.3,
         child: EdgedBanner(
           bannerImage: blog.bannerLocation,
+          randomSeed: blogSlug,
           darken: false,
         ),
       ),

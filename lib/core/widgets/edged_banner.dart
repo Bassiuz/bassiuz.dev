@@ -7,10 +7,11 @@ import '../sizes.dart';
 import 'edge_painter.dart';
 
 class EdgedBanner extends StatelessWidget {
-  const EdgedBanner({super.key, required this.bannerImage, this.darken});
+  const EdgedBanner({super.key, required this.bannerImage, this.darken, this.randomSeed});
 
   final AssetGenImage bannerImage;
   final bool? darken;
+  final String? randomSeed;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +36,7 @@ class EdgedBanner extends StatelessWidget {
             height: Sizes.teethSize,
             width: double.infinity,
             child: CustomPaint(
-              painter: EdgePainter(seed: Random().nextInt(100000000)),
+              painter: EdgePainter(seed: Random(randomSeed?.hashCode).nextInt(100000000)),
             ),
           ),
         ),

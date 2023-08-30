@@ -73,8 +73,8 @@ class _MenuBarComponentState extends State<MenuBarComponent> {
       // If the widget is visible, animate to 0.0 (invisible).
       // If the widget is hidden, animate to 1.0 (fully visible).
       opacity: showMenuBar ? 1.0 : 0.0,
-      duration: const Duration(milliseconds: 1000),
-      curve: Curves.fastLinearToSlowEaseIn,
+      duration: const Duration(milliseconds: 150),
+      curve: Curves.easeIn,
       child: Column(
         children: [
           SizedBox(

@@ -105,19 +105,18 @@ While it depends on the kind of app that we would build next, I would not be afr
 Flutter for Web is not usable for every application, but in some cases, it gives you a whole lot of extras for free!
 
 ‌‌ 
-💪🏼 Where it excels
+### 💪🏼 Where it excels
 
-‌‌ 
 - Mobile and web in one codebase
 - Great cross-platform UI building
 
 ‌‌ 
-🫤 Where it doesn't shine
+### 🫤 Where it doesn't shine
 
-‌‌ 
 - Bad initial loading time
 - Not SEO-friendly (yet!)
 
 ‌‌ 
+
 I hope this gave you a good insight into our experience with Flutter for Web. If you have any questions about whether you should use it or need in-depth technical information, feel free to contact me, and I'll see what I can do for you!
 ''';
