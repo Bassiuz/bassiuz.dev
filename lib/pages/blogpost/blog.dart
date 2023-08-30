@@ -1,8 +1,26 @@
 import '../../gen/assets.gen.dart';
 import 'data/developing_alibi.dart';
+import 'data/fluttercon_2023.dart';
 import 'data/responsive_design_fluid_ui.dart';
+import 'data/widgetbook_testing.dart';
 
 enum Blog {
+  widgetbookTesting(
+      markdownContent: widgetbookTestingContent,
+      title: 'How to transform your widget testing setup into a widget library with Widgetbook',
+      slug: 'widgetbook-testing',
+      bannerLocation: AssetGenImage('assets/blogpost/widgetbook-testing/widgetbook-banner.jpg'),
+      publicationDate: '8 / 8 / 2023',
+      summary:
+          'Recently, I was inspired by a talk from Lucas about Widgetbook. This inspired me to try using Widgetbook in our current projects, while minimising the amount of new code and keeping maintenance costs to a minimum. In this blog post, I will share the approach I came up with.'),
+  fluttercon2023(
+      markdownContent: fluttercon2023Content,
+      title: 'Fluttercon 2023 Recap 🐦',
+      slug: 'fluttercon-2023',
+      bannerLocation: AssetGenImage('assets/blogpost/fluttercon-2023/fluttercon-banner.png'),
+      publicationDate: '20 / 7 / 2023',
+      summary:
+          'Innovation and learning are key! We sent our entire app team (Niels, Job, Nick and myself) to Fluttercon/Droidcon Berlin to learn about the newest technologies in Flutter and Android development. It was three days packed with cutting-edge tech, tips, tricks, and best practices that we can apply in our daily work. We learned a lot and, most importantly, had a fun week meeting many Flutter developers and companies from around the world. Let us take you through our experience in this Fluttercon Recap!'),
   responsiveDesignFluidUi(
       markdownContent: responsiveDesignFluidUiContent,
       title: 'Responsive Design in Flutter: meet Fluid UI!',

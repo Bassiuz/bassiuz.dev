@@ -68,4 +68,5 @@ flutter:
   - assets/blogpost/
   - assets/blogpost/fluid-ui/
   - assets/blogpost/developing-alibi/
-
+  - assets/blogpost/fluttercon-2023/
+  - assets/blogpost/widgetbook-testing/
