@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'config/routing/app_router.dart';
 import 'config/theme/bassiuz_dev_theme.dart';
@@ -7,8 +6,6 @@ import 'gen/assets.gen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-
-  GoogleFonts.config.allowRuntimeFetching = false;
 
   runApp(MyApp());
 }

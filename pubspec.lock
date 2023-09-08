@@ -268,12 +268,11 @@ packages:
   fluid_ui_design:
     dependency: "direct main"
     description:
-      path: "."
-      ref: "feature/performance-upgrade"
-      resolved-ref: "315d3a8184629c1446b58923b3caf8ec11994240"
-      url: "https://github.com/DutchCodingCompany/fluid_ui_design.git"
-    source: git
-    version: "0.0.1-beta.1"
+      name: fluid_ui_design
+      sha256: "20de91c8cea860b596e30fd54d29551b400560e9284a7df5b5bc226c80ef69f7"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.2"
   flutter:
     dependency: "direct main"
     description: flutter

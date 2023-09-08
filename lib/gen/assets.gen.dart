@@ -15,6 +15,10 @@ class $AssetsBlogpostGen {
   $AssetsBlogpostDevelopingAlibiGen get developingAlibi =>
       const $AssetsBlogpostDevelopingAlibiGen();
   $AssetsBlogpostFluidUiGen get fluidUi => const $AssetsBlogpostFluidUiGen();
+  $AssetsBlogpostFluttercon2023Gen get fluttercon2023 =>
+      const $AssetsBlogpostFluttercon2023Gen();
+  $AssetsBlogpostWidgetbookTestingGen get widgetbookTesting =>
+      const $AssetsBlogpostWidgetbookTestingGen();
 }
 
 class $AssetsGoogleFontsGen {
@@ -443,6 +447,64 @@ class $AssetsBlogpostFluidUiGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [demo, fluidUiBanner, utopia];
+}
+
+class $AssetsBlogpostFluttercon2023Gen {
+  const $AssetsBlogpostFluttercon2023Gen();
+
+  /// File path: assets/blogpost/fluttercon-2023/fluttercon-1.png
+  AssetGenImage get fluttercon1 =>
+      const AssetGenImage('assets/blogpost/fluttercon-2023/fluttercon-1.png');
+
+  /// File path: assets/blogpost/fluttercon-2023/fluttercon-2.png
+  AssetGenImage get fluttercon2 =>
+      const AssetGenImage('assets/blogpost/fluttercon-2023/fluttercon-2.png');
+
+  /// File path: assets/blogpost/fluttercon-2023/fluttercon-3.png
+  AssetGenImage get fluttercon3 =>
+      const AssetGenImage('assets/blogpost/fluttercon-2023/fluttercon-3.png');
+
+  /// File path: assets/blogpost/fluttercon-2023/fluttercon-4.png
+  AssetGenImage get fluttercon4 =>
+      const AssetGenImage('assets/blogpost/fluttercon-2023/fluttercon-4.png');
+
+  /// File path: assets/blogpost/fluttercon-2023/fluttercon-5.png
+  AssetGenImage get fluttercon5 =>
+      const AssetGenImage('assets/blogpost/fluttercon-2023/fluttercon-5.png');
+
+  /// File path: assets/blogpost/fluttercon-2023/fluttercon-banner.png
+  AssetGenImage get flutterconBanner => const AssetGenImage(
+      'assets/blogpost/fluttercon-2023/fluttercon-banner.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [
+        fluttercon1,
+        fluttercon2,
+        fluttercon3,
+        fluttercon4,
+        fluttercon5,
+        flutterconBanner
+      ];
+}
+
+class $AssetsBlogpostWidgetbookTestingGen {
+  const $AssetsBlogpostWidgetbookTestingGen();
+
+  /// File path: assets/blogpost/widgetbook-testing/widgetbook-1.png
+  AssetGenImage get widgetbook1 => const AssetGenImage(
+      'assets/blogpost/widgetbook-testing/widgetbook-1.png');
+
+  /// File path: assets/blogpost/widgetbook-testing/widgetbook-2.png
+  AssetGenImage get widgetbook2 => const AssetGenImage(
+      'assets/blogpost/widgetbook-testing/widgetbook-2.png');
+
+  /// File path: assets/blogpost/widgetbook-testing/widgetbook-banner.jpg
+  AssetGenImage get widgetbookBanner => const AssetGenImage(
+      'assets/blogpost/widgetbook-testing/widgetbook-banner.jpg');
+
+  /// List of all assets
+  List<AssetGenImage> get values =>
+      [widgetbook1, widgetbook2, widgetbookBanner];
 }
 
 class Assets {

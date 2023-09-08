@@ -9,5 +9,6 @@ class AppRouter extends $AppRouter {
         AutoRoute(initial: true, page: HomeRoute.page, path: '/'),
         AutoRoute(page: BlogpostRoute.page, path: '/b/:blogSlug'),
         AutoRoute(page: BlogsRoute.page, path: '/blogs'),
+        AutoRoute(page: FluidUIPlaygroundRoute.page, path: '/playground/fluidui'),
       ];
 }
