@@ -1,10 +1,43 @@
 import '../../gen/assets.gen.dart';
 import 'data/developing_alibi.dart';
+import 'data/fixing_fvm.dart';
+import 'data/fluid_ui_in_practice.dart';
+import 'data/flutter_recap_2023.dart';
 import 'data/fluttercon_2023.dart';
 import 'data/responsive_design_fluid_ui.dart';
+import 'data/rick_rrrr.dart';
 import 'data/widgetbook_testing.dart';
 
 enum Blog {
+  rickRRRR(
+      markdownContent: rickRRRRContent,
+      title: 'Rick RRRR - Rick Rolling your app users in a vibrating new dimension!',
+      slug: 'rick-rrrr',
+      bannerLocation: AssetGenImage('assets/blogpost/rick-rrrr/rick.png'),
+      publicationDate: '01 / 04 / 2024',
+      summary: 'Did you ever want to silently Rick Roll your app users? Then Rick RRRR is for you!'),
+  fixingFVM(
+      markdownContent: fixingFVMContent,
+      title: 'Fixing FVM With an open source mindset!',
+      slug: 'fixing-fvm',
+      bannerLocation: AssetGenImage('assets/blogpost/fixing-fvm/tweet.png'),
+      publicationDate: '29 / 02 / 2024',
+      summary: 'After encoutering problems in FVM 3, I contributed in fixing the problem!'),
+  flutterRecap2023(
+      markdownContent: flutterRecap2023Content,
+      title: 'A Flutter Developer’s Recap of 2023',
+      slug: 'flutter-recap-2023',
+      bannerLocation: AssetGenImage('assets/blogpost/flutter-recap-2023/bas1.jpg'),
+      publicationDate: '11 / 01 / 2024',
+      summary: 'I describe my experience as a Flutter Developer in the past year.'),
+  fluidUiInPractice(
+      markdownContent: fluidUiInPracticeContent,
+      title: 'Putting Fluid UI into practice',
+      slug: 'fluid-ui-in-practice',
+      bannerLocation: AssetGenImage('assets/blogpost/developing-alibi/header-bas.jpg'),
+      publicationDate: '5 / 10 / 2023',
+      summary:
+          'Putting the Fluid UI package, introduced in an earlier blogpost, into practice on my personal website!'),
   widgetbookTesting(
       markdownContent: widgetbookTestingContent,
       title: 'How to transform your widget testing setup into a widget library with Widgetbook',
