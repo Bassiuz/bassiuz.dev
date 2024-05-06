@@ -18,7 +18,7 @@ Experimenting with Haptic Feedback gave me the inspiration to developer Rick RRR
 
 ## Getting started
 
-First, you will need to add `rick_rrrr` to your `pubspec.yaml`.
+First, you will need to add 'rick_rrrr' to your 'pubspec.yaml'.
 
 ```
 dependencies:
@@ -27,9 +27,9 @@ dependencies:
   rick_rrrr: 1.0.0
 ```
 
-Then, run `flutter pub get` in your terminal.
+Then, run 'flutter pub get' in your terminal.
 
-**Usage**
+### Usage
 
 Usage is very simple, just import and run;
 
