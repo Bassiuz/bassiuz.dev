@@ -3,8 +3,8 @@ import 'package:fluid_ui_design/fluid_ui_design.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:markdown/markdown.dart' as md;
-import 'package:url_launcher/url_launcher.dart';
 
+import '../../core/url_launcher_method.dart';
 import '../../core/widgets/code_element_builder.dart';
 import '../../core/widgets/edged_banner.dart';
 import '../../core/widgets/max_width_wrapper.dart';

@@ -1,9 +1,9 @@
 import 'package:fluid_ui_design/fluid_ui_design.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../extensions/context_extension.dart';
+import '../url_launcher_method.dart';
 import 'circle_hover_inkwell.dart';
 
 class SocialIcon extends StatelessWidget {
@@ -15,8 +15,10 @@ class SocialIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return CircleHoverInkwell(
       onClick: () async => await canLaunchUrl(Uri.parse(social.url))
-          ? await launchUrl(Uri.parse(social.url), mode: LaunchMode.externalApplication)
-          : print('je moeder heet henk'),
+          ? launchUrl(
+              Uri.parse(social.url),
+            ) // mode: LaunchMode.externalApplication
+          : print('Url not launchable'),
       child: LayoutBuilder(builder: (context, boxConstraints) {
         return Padding(
           padding: EdgeInsets.all(context.fluid.spaces.xs),

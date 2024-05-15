@@ -15,7 +15,6 @@ dependencies:
   google_fonts: ^5.1.0
   scrollview_observer: ^1.16.1
   ionicons: ^0.2.2
-  url_launcher: ^6.1.12
   flutter_markdown: ^0.6.17+1
   markdown: ^7.1.1
   highlighter: ^0.1.1
