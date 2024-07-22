@@ -28,7 +28,7 @@ class TiltedTextWidget extends StatelessWidget {
           
 With over 10 years of (app) development experience, I'm here to teach and help you turn your app dreams into captivating reality.
 
-But that's not all – beyond the lines of code, I'm a self-proclaimed Magic: the Gathering sorcerer with a penchant for mastering off-grid strategies. By day, you'll find me conjuring elegant Flutter solutions at Dutch Coding Company, where I'm constantly pushing the boundaries of what's possible in mobile development.
+But that's not all – beyond the lines of code, I'm a self-proclaimed Magic: the Gathering sorcerer with a penchant for mastering off-grid strategies. By day, you'll find me conjuring elegant Flutter solutions at MedApp, where I'm constantly pushing the boundaries of what's possible in mobile development.
           ''',
           style: context.theme.textTheme.bodySmall,
         ),
