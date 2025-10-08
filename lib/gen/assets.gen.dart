@@ -14,9 +14,16 @@ class $AssetsBlogpostGen {
 
   $AssetsBlogpostDevelopingAlibiGen get developingAlibi =>
       const $AssetsBlogpostDevelopingAlibiGen();
+  $AssetsBlogpostFixingFvmGen get fixingFvm =>
+      const $AssetsBlogpostFixingFvmGen();
   $AssetsBlogpostFluidUiGen get fluidUi => const $AssetsBlogpostFluidUiGen();
+  $AssetsBlogpostFluidUiInPracticeGen get fluidUiInPractice =>
+      const $AssetsBlogpostFluidUiInPracticeGen();
+  $AssetsBlogpostFlutterRecap2023Gen get flutterRecap2023 =>
+      const $AssetsBlogpostFlutterRecap2023Gen();
   $AssetsBlogpostFluttercon2023Gen get fluttercon2023 =>
       const $AssetsBlogpostFluttercon2023Gen();
+  $AssetsBlogpostRickRrrrGen get rickRrrr => const $AssetsBlogpostRickRrrrGen();
   $AssetsBlogpostWidgetbookTestingGen get widgetbookTesting =>
       const $AssetsBlogpostWidgetbookTestingGen();
 }
@@ -430,6 +437,38 @@ class $AssetsBlogpostDevelopingAlibiGen {
   List<AssetGenImage> get values => [alibiLaptop, alibiPhone, headerBas];
 }
 
+class $AssetsBlogpostFixingFvmGen {
+  const $AssetsBlogpostFixingFvmGen();
+
+  /// File path: assets/blogpost/fixing-fvm/aaahhhhh.png
+  AssetGenImage get aaahhhhh =>
+      const AssetGenImage('assets/blogpost/fixing-fvm/aaahhhhh.png');
+
+  /// File path: assets/blogpost/fixing-fvm/asdf.png
+  AssetGenImage get asdf =>
+      const AssetGenImage('assets/blogpost/fixing-fvm/asdf.png');
+
+  /// File path: assets/blogpost/fixing-fvm/contributors.png
+  AssetGenImage get contributors =>
+      const AssetGenImage('assets/blogpost/fixing-fvm/contributors.png');
+
+  /// File path: assets/blogpost/fixing-fvm/meme.png
+  AssetGenImage get meme =>
+      const AssetGenImage('assets/blogpost/fixing-fvm/meme.png');
+
+  /// File path: assets/blogpost/fixing-fvm/slack.png
+  AssetGenImage get slack =>
+      const AssetGenImage('assets/blogpost/fixing-fvm/slack.png');
+
+  /// File path: assets/blogpost/fixing-fvm/tweet.png
+  AssetGenImage get tweet =>
+      const AssetGenImage('assets/blogpost/fixing-fvm/tweet.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values =>
+      [aaahhhhh, asdf, contributors, meme, slack, tweet];
+}
+
 class $AssetsBlogpostFluidUiGen {
   const $AssetsBlogpostFluidUiGen();
 
@@ -447,6 +486,53 @@ class $AssetsBlogpostFluidUiGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [demo, fluidUiBanner, utopia];
+}
+
+class $AssetsBlogpostFluidUiInPracticeGen {
+  const $AssetsBlogpostFluidUiInPracticeGen();
+
+  /// File path: assets/blogpost/fluid-ui-in-practice/example.png
+  AssetGenImage get example =>
+      const AssetGenImage('assets/blogpost/fluid-ui-in-practice/example.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [example];
+}
+
+class $AssetsBlogpostFlutterRecap2023Gen {
+  const $AssetsBlogpostFlutterRecap2023Gen();
+
+  /// File path: assets/blogpost/flutter-recap-2023/alibi.png
+  AssetGenImage get alibi =>
+      const AssetGenImage('assets/blogpost/flutter-recap-2023/alibi.png');
+
+  /// File path: assets/blogpost/flutter-recap-2023/bas1.jpg
+  AssetGenImage get bas1 =>
+      const AssetGenImage('assets/blogpost/flutter-recap-2023/bas1.jpg');
+
+  /// File path: assets/blogpost/flutter-recap-2023/bas2.jpg
+  AssetGenImage get bas2 =>
+      const AssetGenImage('assets/blogpost/flutter-recap-2023/bas2.jpg');
+
+  /// File path: assets/blogpost/flutter-recap-2023/hours.png
+  AssetGenImage get hours =>
+      const AssetGenImage('assets/blogpost/flutter-recap-2023/hours.png');
+
+  /// File path: assets/blogpost/flutter-recap-2023/linkedin.png
+  AssetGenImage get linkedin =>
+      const AssetGenImage('assets/blogpost/flutter-recap-2023/linkedin.png');
+
+  /// File path: assets/blogpost/flutter-recap-2023/team.png
+  AssetGenImage get team =>
+      const AssetGenImage('assets/blogpost/flutter-recap-2023/team.png');
+
+  /// File path: assets/blogpost/flutter-recap-2023/widgetbook.png
+  AssetGenImage get widgetbook =>
+      const AssetGenImage('assets/blogpost/flutter-recap-2023/widgetbook.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values =>
+      [alibi, bas1, bas2, hours, linkedin, team, widgetbook];
 }
 
 class $AssetsBlogpostFluttercon2023Gen {
@@ -485,6 +571,29 @@ class $AssetsBlogpostFluttercon2023Gen {
         fluttercon5,
         flutterconBanner
       ];
+}
+
+class $AssetsBlogpostRickRrrrGen {
+  const $AssetsBlogpostRickRrrrGen();
+
+  /// File path: assets/blogpost/rick-rrrr/comments.png
+  AssetGenImage get comments =>
+      const AssetGenImage('assets/blogpost/rick-rrrr/comments.png');
+
+  /// File path: assets/blogpost/rick-rrrr/faq.png
+  AssetGenImage get faq =>
+      const AssetGenImage('assets/blogpost/rick-rrrr/faq.png');
+
+  /// File path: assets/blogpost/rick-rrrr/gaimon.jpg
+  AssetGenImage get gaimon =>
+      const AssetGenImage('assets/blogpost/rick-rrrr/gaimon.jpg');
+
+  /// File path: assets/blogpost/rick-rrrr/rick.png
+  AssetGenImage get rick =>
+      const AssetGenImage('assets/blogpost/rick-rrrr/rick.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [comments, faq, gaimon, rick];
 }
 
 class $AssetsBlogpostWidgetbookTestingGen {

@@ -4,18 +4,30 @@ import 'data/fixing_fvm.dart';
 import 'data/fluid_ui_in_practice.dart';
 import 'data/flutter_recap_2023.dart';
 import 'data/fluttercon_2023.dart';
+import 'data/mtga_set_swapper.dart';
 import 'data/responsive_design_fluid_ui.dart';
 import 'data/rick_rrrr.dart';
 import 'data/widgetbook_testing.dart';
 
 enum Blog {
+  mtgaSetSwapper(
+      markdownContent: mtgaSetSwapperContent,
+      title: 'From RCQ Prep to Open Source: The Story of the MTG Arena Set Swapper 🕷️',
+      slug: 'mtga-set-swapper',
+      bannerLocation: AssetGenImage(
+          'assets/blogpost/mtga-set-swapper/banner.png'), // Make sure you have a banner image at this location
+      publicationDate: '08 / 10 / 2025',
+      summary:
+          'How my preparation for a paper Magic tournament led me to build a tool to swap card art in MTG Arena.'),
+
   rickRRRR(
       markdownContent: rickRRRRContent,
       title: 'Rick RRRR - Rick Rolling your app users in a vibrating new dimension!',
       slug: 'rick-rrrr',
       bannerLocation: AssetGenImage('assets/blogpost/rick-rrrr/rick.png'),
       publicationDate: '01 / 04 / 2024',
-      summary: 'Did you ever want to silently Rick Roll your app users? Then Rick RRRR is for you!'),
+      summary:
+          'Did you ever want to silently Rick Roll your app users? Then Rick RRRR is for you!'),
   fixingFVM(
       markdownContent: fixingFVMContent,
       title: 'Fixing FVM With an open source mindset!',
