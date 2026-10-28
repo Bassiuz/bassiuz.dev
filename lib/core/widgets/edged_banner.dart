@@ -7,11 +7,12 @@ import '../sizes.dart';
 import 'edge_painter.dart';
 
 class EdgedBanner extends StatelessWidget {
-  const EdgedBanner({super.key, required this.bannerImage, this.darken, this.randomSeed});
+  const EdgedBanner({super.key, required this.bannerImage, this.darken, this.randomSeed, this.alignment = Alignment.center});
 
   final AssetGenImage bannerImage;
   final bool? darken;
   final String? randomSeed;
+  final Alignment alignment;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class EdgedBanner extends StatelessWidget {
               height: double.infinity,
               child: bannerImage.image(
                 fit: BoxFit.cover,
-                alignment: Alignment.center,
+                alignment: alignment,
                 color: darken == null || darken == true ? Colors.black.withOpacity(0.7) : null,
                 colorBlendMode: BlendMode.darken,
               )),

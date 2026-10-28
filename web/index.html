@@ -41,6 +41,9 @@
 </head>
 <body>
   <script>
+    // Old hash links (/#/blogs) keep working after the switch to path URLs.
+    if (location.hash.startsWith('#/')) history.replaceState(null, '', location.hash.slice(1));
+
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({

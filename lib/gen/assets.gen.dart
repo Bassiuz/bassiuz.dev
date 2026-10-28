@@ -12,6 +12,7 @@ import 'package:flutter/widgets.dart';
 class $AssetsBlogpostGen {
   const $AssetsBlogpostGen();
 
+  $AssetsBlogpostAiGen get ai => const $AssetsBlogpostAiGen();
   $AssetsBlogpostDevelopingAlibiGen get developingAlibi =>
       const $AssetsBlogpostDevelopingAlibiGen();
   $AssetsBlogpostFixingFvmGen get fixingFvm =>
@@ -23,6 +24,8 @@ class $AssetsBlogpostGen {
       const $AssetsBlogpostFlutterRecap2023Gen();
   $AssetsBlogpostFluttercon2023Gen get fluttercon2023 =>
       const $AssetsBlogpostFluttercon2023Gen();
+  $AssetsBlogpostMtgaSetSwapperGen get mtgaSetSwapper =>
+      const $AssetsBlogpostMtgaSetSwapperGen();
   $AssetsBlogpostRickRrrrGen get rickRrrr => const $AssetsBlogpostRickRrrrGen();
   $AssetsBlogpostWidgetbookTestingGen get widgetbookTesting =>
       const $AssetsBlogpostWidgetbookTestingGen();
@@ -418,6 +421,17 @@ class $AssetsImagesGen {
       ];
 }
 
+class $AssetsBlogpostAiGen {
+  const $AssetsBlogpostAiGen();
+
+  /// File path: assets/blogpost/ai/bas-mobile.jpg
+  AssetGenImage get basMobile =>
+      const AssetGenImage('assets/blogpost/ai/bas-mobile.jpg');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [basMobile];
+}
+
 class $AssetsBlogpostDevelopingAlibiGen {
   const $AssetsBlogpostDevelopingAlibiGen();
 
@@ -571,6 +585,21 @@ class $AssetsBlogpostFluttercon2023Gen {
         fluttercon5,
         flutterconBanner
       ];
+}
+
+class $AssetsBlogpostMtgaSetSwapperGen {
+  const $AssetsBlogpostMtgaSetSwapperGen();
+
+  /// File path: assets/blogpost/mtga-set-swapper/app-screenshot.png
+  AssetGenImage get appScreenshot => const AssetGenImage(
+      'assets/blogpost/mtga-set-swapper/app-screenshot.png');
+
+  /// File path: assets/blogpost/mtga-set-swapper/banner.png
+  AssetGenImage get banner =>
+      const AssetGenImage('assets/blogpost/mtga-set-swapper/banner.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [appScreenshot, banner];
 }
 
 class $AssetsBlogpostRickRrrrGen {

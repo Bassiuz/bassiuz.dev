@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
 
 import 'config/routing/app_router.dart';
 import 'config/theme/bassiuz_dev_theme.dart';
@@ -6,6 +7,7 @@ import 'gen/assets.gen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+  usePathUrlStrategy();
 
   runApp(MyApp());
 }
