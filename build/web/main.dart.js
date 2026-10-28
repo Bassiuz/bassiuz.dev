@@ -1496,7 +1496,7 @@ s.a5S()
 return s},
 aNz(a){return new A.a6r($.aB,a)},
 axI(){var s,r,q,p,o,n=A.aN7(self.window.navigator)
-if(n==null||n.length===0)return B.oR
+if(n==null||n.length===0)return B.oQ
 s=A.a([],t.ss)
 for(r=n.length,q=0;q<n.length;n.length===r||(0,A.I)(n),++q){p=n[q]
 o=J.aB6(p,"-")
@@ -1713,7 +1713,7 @@ aQV(){$.ahn.ai(0,new A.aho())
 $.ahn.a0(0)},
 aHK(){var s=$.avx
 if(s==null){s=t.jQ
-s=$.avx=new A.mn(A.azB(u.K,937,B.p_,s),B.bz,A.v(t.S,s),t.MX)}return s},
+s=$.avx=new A.mn(A.azB(u.K,937,B.oZ,s),B.bz,A.v(t.S,s),t.MX)}return s},
 aOy(a){if(self.Intl.v8BreakIterator!=null)return new A.ajF(A.aVF(),a)
 return new A.a6H(a)},
 aVh(a,b,c){var s,r,q,p,o,n,m,l,k=A.a([],t._f)
@@ -1742,7 +1742,7 @@ a.a=r
 if(s!=null&&s>65535){q.$2(B.A,-1)
 p=++a.f}s=A.Ix(a1,p)
 p=$.avx
-r=(p==null?$.avx=new A.mn(A.azB(u.K,937,B.p_,n),B.bz,A.v(m,n),l):p).qH(s)
+r=(p==null?$.avx=new A.mn(A.azB(u.K,937,B.oZ,n),B.bz,A.v(m,n),l):p).qH(s)
 i=a.a
 j=i===B.hU?j+1:0
 if(i===B.f6||i===B.hS){q.$2(B.d6,5)
@@ -7193,7 +7193,7 @@ s+=j
 r=s
 p=!0}else if(o<127&&(B.IG[o>>>4]&1<<(o&15))!==0){if(p&&65<=o&&90>=o){if(q==null)q=new A.cg("")
 if(r<s){q.a+=B.c.T(a,r,s)
-r=s}p=!1}++s}else if(o<=93&&(B.oT[o>>>4]&1<<(o&15))!==0)A.xb(a,s,"Invalid character")
+r=s}p=!1}++s}else if(o<=93&&(B.oS[o>>>4]&1<<(o&15))!==0)A.xb(a,s,"Invalid character")
 else{if((o&64512)===55296&&s+1<c){i=a.charCodeAt(s+1)
 if((i&64512)===56320){o=(o&1023)<<10|i&1023|65536
 j=2}else j=1}else j=1
@@ -7214,7 +7214,7 @@ azk(a,b,c){var s,r,q
 if(b===c)return""
 if(!A.aGj(a.charCodeAt(b)))A.xb(a,b,"Scheme not starting with alphabetic character")
 for(s=b,r=!1;s<c;++s){q=a.charCodeAt(s)
-if(!(q<128&&(B.oQ[q>>>4]&1<<(q&15))!==0))A.xb(a,s,"Illegal scheme character")
+if(!(q<128&&(B.oP[q>>>4]&1<<(q&15))!==0))A.xb(a,s,"Illegal scheme character")
 if(65<=q&&q<=90)r=!0}a=B.c.T(a,b,c)
 return A.aSX(r?a.toLowerCase():a)},
 aSX(a){if(a==="http")return"http"
@@ -7227,7 +7227,7 @@ return A.HC(a,b,c,B.Ij,!1,!1)},
 aup(a,b,c,d,e,f){var s,r=e==="file",q=r||f
 if(a==null){if(d==null)return r?"/":""
 s=new A.V(d,new A.auq(),d.$ti.i("V<at.E,l>")).bz(0,"/")}else if(d!=null)throw A.c(A.dn("Both path and pathSegments specified",null))
-else s=A.HC(a,b,c,B.oS,!0,!0)
+else s=A.HC(a,b,c,B.oR,!0,!0)
 if(s.length===0){if(r)return"/"}else if(q&&!B.c.bC(s,"/"))s="/"+s
 return A.aT4(s,e,f)},
 aT4(a,b,c){var s=b.length===0
@@ -7276,7 +7276,7 @@ else{if(o===37){n=A.azl(a,r,!1)
 if(n==null){r+=3
 continue}if("%"===n){n="%25"
 m=1}else m=3}else if(o===92&&f){n="/"
-m=1}else if(s&&o<=93&&(B.oT[o>>>4]&1<<(o&15))!==0){A.xb(a,r,"Invalid character")
+m=1}else if(s&&o<=93&&(B.oS[o>>>4]&1<<(o&15))!==0){A.xb(a,r,"Invalid character")
 m=i
 n=m}else{if((o&64512)===55296){l=r+1
 if(l<c){k=a.charCodeAt(l)
@@ -7318,7 +7318,7 @@ return B.b.bz(s,"/")},
 aGi(a){var s,r,q=a.length
 if(q>=2&&A.aGj(a.charCodeAt(0)))for(s=1;s<q;++s){r=a.charCodeAt(s)
 if(r===58)return B.c.T(a,0,s)+"%3A"+B.c.bD(a,s+1)
-if(r>127||(B.oQ[r>>>4]&1<<(r&15))===0)break}return a},
+if(r>127||(B.oP[r>>>4]&1<<(r&15))===0)break}return a},
 aT6(a,b){if(a.JH("package")&&a.c==null)return A.aHi(b,0,b.length)
 return-1},
 aT0(){return A.a([],t.s)},
@@ -8053,7 +8053,7 @@ if(r==null)r=3
 s=b==null?null:b.a
 r=A.W(r,s==null?3:s,c)
 r.toString
-return B.oU[A.p4(B.d.aH(r),0,8)]},
+return B.oT[A.p4(B.d.aH(r),0,8)]},
 aCE(a,b,c){var s=a==null,r=s?null:a.a,q=b==null
 if(r==(q?null:b.a))s=s&&q
 else s=!0
@@ -8818,7 +8818,7 @@ MI:function MI(a,b,c){this.c=a
 this.d=b
 this.a=c},
 aa3:function aa3(a){this.a=a},
-aOJ(a){var s=A.ay_(new A.aF(B.oP,new A.aaG(a),t.sp))
+aOJ(a){var s=A.ay_(new A.aF(B.p0,new A.aaG(a),t.sp))
 return s==null?B.uW:s},
 fd:function fd(a,b,c,d){var _=this
 _.c=a
@@ -37401,7 +37401,7 @@ r===$&&A.b()
 p.push(B.d.bo(r.index)+s)}return p},
 gjs(){var s,r,q,p=this,o=p.as
 if(o===$){s=p.b
-if(p.goH()===s)r=B.oX
+if(p.goH()===s)r=B.oW
 else{s=B.c.T(p.Q.c,s,p.goH())
 q=self.Intl.Segmenter==null?p.a9V(s):p.aai(s)
 if(q.length!==0)q.push(p.goH())
@@ -39946,11 +39946,11 @@ gasJ(){var s=this.a
 if(s instanceof A.eE)return s
 return this.a=new A.eE(s)},
 gaua(){var s,r,q,p,o,n=this
-if(n.c===1)return B.oW
+if(n.c===1)return B.oV
 s=n.d
 r=J.ai(s)
 q=r.gt(s)-J.bu(n.e)-n.f
-if(q===0)return B.oW
+if(q===0)return B.oV
 p=[]
 for(o=0;o<q;++o)p.push(r.h(s,o))
 return J.aD3(p)},
@@ -42472,7 +42472,7 @@ if(s==null||s.length<b)s=this.c=new Uint8Array(b)
 return A.ey(s.buffer,s.byteOffset,b)}}
 A.akR.prototype={
 F(a,b){this.xJ(0,b,0,J.bu(b),!1)},
-aE(a){this.xJ(0,B.oX,0,0,!0)},
+aE(a){this.xJ(0,B.oW,0,0,!0)},
 ds(a,b,c,d){A.cm(b,c,a.length,null,null)
 this.xJ(0,a,b,c,d)}}
 A.akE.prototype={
@@ -43783,7 +43783,7 @@ r=B.c.ly(m,"?",s)
 q=m.length
 if(r>=0){p=A.HC(m,r+1,q,B.hY,!1,!1)
 q=r}else p=n
-m=o.c=new A.Tt(o,"data","",n,n,A.HC(m,s,q,B.oS,!1,!1),p,n)}return m},
+m=o.c=new A.Tt(o,"data","",n,n,A.HC(m,s,q,B.oR,!1,!1),p,n)}return m},
 gasK(a){var s=this.b,r=s[0]+1,q=s[1]
 if(r===q)return"text/plain"
 return A.fM(this.a,r,q,B.N,!1)},
@@ -46927,7 +46927,7 @@ return s.tJ(p,null,t.X)},
 $S:334}
 A.MI.prototype={
 I(a){var s,r,q,p=null,o=A.a([],t.ql)
-for(s=t.uO,r=0;r<2;++r){q=B.oP[r]
+for(s=t.uO,r=0;r<2;++r){q=B.p0[r]
 o.push(new A.n7(q,A.br(q.c,p,p,p,p,p,p),s))}return new A.vf(o,A.bl([this.c],t.wP),new A.aa3(this),!1,p,t.It)}}
 A.aa3.prototype={
 $1(a){return this.a.d.$1(a.gbJ(a))},
@@ -52021,7 +52021,7 @@ n=o.ch
 o=o.cx
 r=q.gaeX()
 q.a.toString
-return new A.DN(p,p,p,p,p,p,p,p,n,p,p,p,p,p,p,q.gaf7(),o,p,B.UD,s,p,r,p,p,B.oR,!1,!1,!1,!1,q.gaer(),!0,p,p,p,new A.pV(q,t.bT))},
+return new A.DN(p,p,p,p,p,p,p,p,n,p,p,p,p,p,p,q.gaf7(),o,p,B.UD,s,p,r,p,p,B.oQ,!1,!1,!1,!1,q.gaer(),!0,p,p,p,new A.pV(q,t.bT))},
 I(a){var s,r=null,q=A.nm(!1,!1,this.a7n(a),r,r,r,r,!0,r,r,r,new A.aoX(),r,r)
 this.a.toString
 s=this.d
@@ -65974,7 +65974,7 @@ p=h.gnr(0)
 o=h.r
 o=o==null?g:o*a2+a1
 n=h.w
-n=n==null?g:B.oU[B.h.hT(n.a,0,8)]
+n=n==null?g:B.oT[B.h.hT(n.a,0,8)]
 m=h.y
 m=m==null?g:m+0
 l=h.z
@@ -66780,8 +66780,8 @@ s=r.a5
 r.f8=s==null?null:s.gLN()
 a.a=!1},
 q_(a,b,c){var s,r,q,p,o=this
-o.fZ=A.aEq(o.fZ,B.oY)
-o.ht=A.aEq(o.ht,B.oY)
+o.fZ=A.aEq(o.fZ,B.oX)
+o.ht=A.aEq(o.ht,B.oX)
 s=o.fZ
 r=s!=null&&!s.gad(s)
 s=o.ht
@@ -72705,7 +72705,7 @@ if(e.Y*e.J===0){s=b.a
 r=b.b
 q=e.B
 q===$&&A.b()
-e.af.Zt(a.gbk(a),new A.z(s,r,s+q,r+0),B.oZ,B.oZ)
+e.af.Zt(a.gbk(a),new A.z(s,r,s+q,r+0),B.oY,B.oY)
 return}if(e.am!=null){p=a.gbk(a)
 for(s=e.cF,r=b.a,q=b.b,o=e.gda(),n=0;n<e.Y;++n){m=e.am
 if(m.length<=n)break
@@ -75505,7 +75505,7 @@ A.hO.prototype={
 H(){return"ModifierKey."+this.b}}
 A.Bi.prototype={
 gasT(){var s,r,q=A.v(t.xS,t.Di)
-for(s=0;s<9;++s){r=B.p0[s]
+for(s=0;s<9;++s){r=B.p_[s]
 if(this.as3(r))q.n(0,r,B.dS)}return q}}
 A.jw.prototype={}
 A.adf.prototype={
@@ -75538,7 +75538,7 @@ j=$.iZ()
 if(j!=null)j.$1(new A.bE(r,q,"services library",k,null,!1))}}return!1},
 ajX(a1){var s,r,q,p,o,n,m,l,k,j,i,h,g=a1.c,f=g.gasT(),e=t.v3,d=A.v(e,t.u),c=A.aJ(e),b=this.d,a=A.dJ(new A.ba(b,A.k(b).i("ba<1>")),e),a0=a1 instanceof A.o1
 if(a0)a.F(0,g.gk6())
-for(s=g.a,r=null,q=0;q<9;++q){p=B.p0[q]
+for(s=g.a,r=null,q=0;q<9;++q){p=B.p_[q]
 o=$.aJ8()
 n=o.h(0,new A.d6(p,B.cj))
 if(n==null)continue
@@ -75990,8 +75990,8 @@ H(){return"SmartDashesType."+this.b}}
 A.ahj.prototype={
 H(){return"SmartQuotesType."+this.b}}
 A.rl.prototype={
-lM(){return A.as(["name","TextInputType."+B.oV[this.a],"signed",this.b,"decimal",this.c],t.N,t.z)},
-k(a){return"TextInputType(name: "+("TextInputType."+B.oV[this.a])+", signed: "+A.j(this.b)+", decimal: "+A.j(this.c)+")"},
+lM(){return A.as(["name","TextInputType."+B.oU[this.a],"signed",this.b,"decimal",this.c],t.N,t.z)},
+k(a){return"TextInputType(name: "+("TextInputType."+B.oU[this.a])+", signed: "+A.j(this.b)+", decimal: "+A.j(this.c)+")"},
 j(a,b){if(b==null)return!1
 return b instanceof A.rl&&b.a===this.a&&b.b==this.b&&b.c==this.c},
 gC(a){return A.M(this.a,this.b,this.c,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a)}}
@@ -99833,10 +99833,7 @@ B.Ed=new A.K_("}")
 B.RQ=new A.QD("\t")
 B.oO=A.a(s([B.HA,B.Ed,B.RQ]),A.af("w<n9>"))
 B.J2=A.a(s([B.jt,B.ju]),A.af("w<xR>"))
-B.uW=new A.fd("Nederlands","# Artificial Intelligence in mijn software.\n\nIk gebruik Artificial Intelligence in het ontwikkelen van mijn software. Deze techniek is een enorme versneller in het proces en een gereedschap waarmeer ik mijn kennis kan verbreden. AI is geen vervanging voor creativiteit, en geen reden om niet scherp te zijn op softwareveiligheid & bruikbaarheid en heeft nooit de overhand in techinische keuzes. Dit manifest omschrijft de afwegingen die ik elke keer maak bij het inzetten van Artificial Intelligence in wat ik maak. \n\n---\n\nMet het groeiende gebruik van AI in wereld bij het maken van zo ongeveer alles ontstaat bij veel mensen een weerstand; bij mij ook. Ik kan niet meer over straat zonder smakeloze AI posters te zien vol met dezelfde stijl tekst, snorharen en overduidelijk fake mensen of fake producten. AI slop is overal om ons heen en de natuurlijke reactie om niks met AI te maken te hebben is erg natuurlijk. \nOok binnen Software Developemnt is deze AI Slop boom gaande. Op elk gebied, elke hobby, elke game komen er software tools als paddestoelen uit de grond. Iedereen kan nu opeens een stukje software maken, zomaar ergens neerzetten en daarna kijken we wel wat er mee gebeurd. Veiligheid van software is daarom een oprechte zorgen, en voor een gebruiker is het vaak ook een investering om nieuwe software te gaan gebruiken. Als je er later achter komt dat het slecht in elkaar zit, of vlug niet meer wordt ondersteund, is dat een flinke domper. \n\nIk heb meer dan een decenium ervaring in het schrijven van software binnen meerdere disciplines, en zou ook prima een mooi product kunnen maken zonder gebruik van AI die me helpt in het schrijven van mijn code. Ik denk alleen dat deze houding van alles of niets zonde is; er zijn namelijk dingen waar AI ontzettend goed in is en waar het een gemiste kans zou zijn om dit niet als verlengde van je eigen skills te gebruiken. Maar het is ook niet meer dan dat, een stuk gereedschap als verlengde van je eigen vaardigheden. En in al die jaren software developemnt denk ik dat ik sterk door heb welke disciplines nog een menselijke input nodig hebben.\n\n## Softwareveiligheid\nEen AI model stelt natuurlijk code voor die ze al vaker gezien heeft. Dat is niet per definitie veilige code. Als je andere mensen gebruik laat maken van jouw software, is het jouw verantwoordelijkheid om goed om te gaan met de datae van jouw gebruikers. Dit is niet de verantwoordelijkheid van een AI agent, en daarom is het belangrijk om kritische onderdelen van software altijd goed te blijven controleren op mogelijke problemen op security vlak. Dit is niet anders dan een goede security review over een stuk code die ik zou doen bij een collega software developer. Safety first!\n\n## Bruikbaarheid & betrouwbaarheid\nEen AI model zal niet tegenstribbelen als er op dezelfde pagina honderden functeis worden toegevoegd, als er functies niet goed werken of als iets stuk gaat als je van tijdzone verandert. Hoe ontwerp je een goed stuk software, hoe zorg je ervoor dat gebruikers begrijpen wat er gebeurt en hoe bouw je software die nu werkt en ook blijft werken. Dit stukje bruikbaarheid is absoluut niet vanzelfsprekend van puur AI gegenereerde software, en vergt vaak nog heel veel afstemming op basis van ervaring van een goede ontwikkelaar.\n\n## Creativiteit\nDe techniek in een LLM zoals we hem nu zien is inschatten wat de meest waarschijnlijke uitkomst op een vraag van de gebruiker is. Van alle duizenden, dan niet miljoenen, vergelijkbare voorbeelden die het model heeft gezien gaat het kijken wat het meest voorkomende voorbeeld is wat voldoet aan de vraag die de gebruiker stelt. Als je vraagt naar de omschrijving van een piraat, krijg je een man met een baard, haak op een boot met een zwarte vlag; puur omdat dat het meeste voorkomt in het bron materiaal.\n\nMenselijke creativiteit is het mooie vinden in de onvoorspelbaarheid van de mens. De inprefectie van een kwaststrook op een schildersdoek. De timing in de grap van een comediant. Het mooie vinden in iets bedenken wat iemand nog nooit heeft bedacht of opgeschreven.\n\nIets helemaal nieuws maken is iets wat AI niet kan. In essentie is het goed in dingen te kopieren en die samen te voegen. Alle creativiteit, al het nieuwe, moet uit de mens komen die creatief denkt en bezig is. Zonder creatieve sturing maakt een AI model een kopie van wat ze eerder gezien heeft.\n\n## Kritisch denkvermogen\nAI agents zijn echte yes-man's. Ze zoeken naar het antwoord waar jij het meest waarschijnlijk naar zoekt. Het gaat om constante bevestiging van hoe jij de vraag in steekt. Als je vraagt 'ik heb vandaag toch geen paraplu nodig?' dan heb je volgens het model geen paraplu nodig, terwijl als je vraagt 'Zal ik een paraplu meenemen vandaag?' je een ja krijgt. \nEen AI model kan nooit het kritisch denken vervangen. Het maken van keuzes, zoals het gebruik van AI bijvoorbeeld, is er niet een die je kan laten vervangen door AI. Voor het schrijven van dit manifest en voor vrijwel elke andere tekst die ik schrijf komt geen AI aan te pas. Schrijven is denken, en dat kritisch denken kan je niet overlaten aan een AI model.\n\n## Ethische overwegingen\nHet zijn niet alleen technische keuzes die mensen doen overwegen om niks met AI te maken te hebben. De impact die de datacenters van AI bedrijven hebben op het millieu, of het zonder toestemming gebruiken van bronmateriaal om AI modellen mee te trainen en vervolgens geen cent terug te betalen aan de orginele auteurs zijn verwerpelijk. Toch kies ik er voor om, op dit moment, gebruik te maken van deze AI modellen. Ik doe dit met de overweging dat ik elders meer impact kan maken met mijn stem. Regulering op AI bedrijven zou wat mij betreft moeten komen van bovenaf. Zelfs als elke consument los besluit om geen gebruik te maken van AI denk ik dat het binnen de corporate wereld altijd zijn toepassing zal gaan vinden. Dus zelfs als ik besluit mijn portemonee dicht te houden en niet mee te doen denk ik dat ik de wereld er niet meer verander. Ik hoop dat ik met het maken van mooie software juist wel impact kan maken.\n\n\n\nHet is voor mij een constante overweging wat ik op welke manier inricht met AI. Ik neem het niemand kwalijk als ze er een andere mening op na laten, en dat dat een overweging kan zijn om geen gebruik te maken van mijn software. Ik hoop alleen dat ik overtuigend ben geweest in het feit dat ik mijn best doe om een snel veranderende wereld mijn verantwoording te nemen als het gaat over het gebruik van Artificial Intelligence. Ik sta open voor respectvolle discussie over mijn standpunt hierin, en ik probeer hier zo veel mogelijk transparantie in te bieden.\n\nAl met al hoop ik dat ik met mijn software een positieve impact maak op mensen die het gebruiken, en dat ik dit op een verantwoordelijke kan blijven doen.\n\nBas de Vaan  \n28 Oktober 2026\n",0,"nl")
-B.Lx=new A.fd("English","# Artificial Intelligence in my software.\n\nI use Artificial Intelligence in developing my software. This technology is a huge accelerator in the process and a tool with which I can broaden my knowledge. AI is no replacement for creativity, no reason to stop being sharp on software security & usability, and never has the upper hand in technical choices. This manifesto describes the trade-offs I make every time I use Artificial Intelligence in what I make.\n\n---\n\nWith the growing use of AI in the world for making just about everything, many people develop a resistance; me too. I can't walk down the street anymore without seeing tasteless AI posters full of the same style of text, moustaches and obviously fake people or fake products. AI slop is all around us, and the reaction of wanting nothing to do with AI is a very natural one.\nWithin Software Development this AI slop boom is happening too. In every field, every hobby, every game, software tools are popping up like mushrooms. Suddenly anyone can make a piece of software, put it out there somewhere, and then we'll see what happens. Software security is therefore a genuine concern, and for a user it is often an investment to start using new software. If you later find out it is badly put together, or quickly stops being supported, that is a real letdown.\n\nI have more than a decade of experience writing software across multiple disciplines, and could make a fine product without the help of AI in writing my code. I just think this all-or-nothing attitude is a waste; there are things AI is incredibly good at, and it would be a missed opportunity not to use it as an extension of your own skills. But it is also nothing more than that, a tool as an extension of your own abilities. And in all those years of software development, I think I have a strong sense of which disciplines still need human input.\n\n## Software security\nAn AI model naturally suggests code it has seen before. That is not by definition secure code. If you let other people use your software, it is your responsibility to handle your users' data properly. This is not the responsibility of an AI agent, which is why it is important to always keep checking critical parts of software for possible security issues. This is no different from a good security review of a piece of code that I would do for a fellow software developer. Safety first!\n\n## Usability & reliability\nAn AI model will not push back when hundreds of features are added to the same page, when features don't work properly, or when something breaks when you change time zones. How do you design a good piece of software, how do you make sure users understand what is happening, and how do you build software that works now and keeps working? This part, usability, is absolutely not a given in purely AI-generated software, and often still takes a lot of fine-tuning based on the experience of a good developer.\n\n## Creativity\nThe technology in an LLM as we see it now is estimating the most likely answer to a user's question. Out of all the thousands, if not millions, of similar examples the model has seen, it looks for the most common example that fits the question the user asks. If you ask for a description of a pirate, you get a man with a beard and a hook on a boat with a black flag; purely because that is what occurs most in the source material.\n\nHuman creativity is finding beauty in the unpredictability of people. The imperfection of a brushstroke on a canvas. The timing in a comedian's joke. Finding beauty in coming up with something nobody has ever thought of or written down before.\n\nMaking something completely new is something AI cannot do. In essence it is good at copying things and combining them. All creativity, everything new, has to come from the human who thinks and works creatively. Without creative direction, an AI model makes a copy of what it has seen before.\n\n## Critical thinking\nAI agents are real yes-men. They look for the answer you are most likely looking for. It is about constantly confirming how you frame the question. If you ask 'I don't need an umbrella today, right?' then according to the model you don't need an umbrella, while if you ask 'Should I bring an umbrella today?' you get a yes.\nAn AI model can never replace critical thinking. Making choices, such as the use of AI for example, is not one you can hand over to AI. No AI was involved in writing this manifesto, or in virtually any other text I write. Writing is thinking, and you cannot leave that critical thinking to an AI model.\n\n## Ethical considerations\nIt is not only technical choices that make people consider wanting nothing to do with AI. The impact that the data centres of AI companies have on the environment, or using source material without permission to train AI models and then not paying a cent back to the original authors, are reprehensible. Still, I choose, for now, to use these AI models. I do this with the consideration that I can make more impact with my voice elsewhere. In my view, regulation of AI companies should come from the top down. Even if every consumer individually decides not to use AI, I think it will always find its application in the corporate world. So even if I decide to keep my wallet closed and not take part, I don't think I would change the world with it. I hope that by making good software I can make an impact.\n\n\n\nFor me it is a constant consideration what I set up with AI and in what way. I don't blame anyone for holding a different opinion, or for that being a reason not to use my software. I only hope I have been convincing in the fact that I do my best to take my responsibility in a rapidly changing world when it comes to the use of Artificial Intelligence. I am open to respectful discussion about my position on this, and I try to offer as much transparency on it as possible.\n\nAll in all, I hope that with my software I make a positive impact on the people who use it, and that I can keep doing so responsibly.\n\nBas de Vaan\n28 October 2026\n",1,"en")
-B.oP=A.a(s([B.uW,B.Lx]),A.af("w<fd>"))
-B.oQ=A.a(s([0,0,26624,1023,65534,2047,65534,2047]),t.t)
+B.oP=A.a(s([0,0,26624,1023,65534,2047,65534,2047]),t.t)
 B.fb=A.a(s([B.dx,B.cU,B.fU,B.fV,B.js]),t.QP)
 B.bD=new A.jR(0,"leading")
 B.bp=new A.jR(1,"title")
@@ -99848,9 +99845,9 @@ B.MC=new A.i(0,2)
 B.CG=new A.dW(0.75,B.cW,B.nk,B.MC,1.5)
 B.Jb=A.a(s([B.CG]),t.sq)
 B.K3=new A.kx("en","US")
-B.oR=A.a(s([B.K3]),t.ss)
+B.oQ=A.a(s([B.K3]),t.ss)
 B.Jc=A.a(s([0,0,32722,12287,65535,34815,65534,18431]),t.t)
-B.oS=A.a(s([0,0,65490,12287,65535,34815,65534,18431]),t.t)
+B.oR=A.a(s([0,0,65490,12287,65535,34815,65534,18431]),t.t)
 B.Jd=A.a(s(["pointerdown","pointermove","pointerleave","pointerup","pointercancel","touchstart","touchend","touchmove","touchcancel","mousedown","mousemove","mouseleave","mouseup","keyup","keydown"]),t.s)
 B.Ry=new A.CX(0,"left")
 B.Rz=new A.CX(1,"right")
@@ -99858,7 +99855,7 @@ B.Ji=A.a(s([B.Ry,B.Rz]),A.af("w<CX>"))
 B.P=new A.os(0,"rtl")
 B.o=new A.os(1,"ltr")
 B.Jj=A.a(s([B.P,B.o]),A.af("w<os>"))
-B.oT=A.a(s([0,0,32776,33792,1,10240,0,0]),t.t)
+B.oS=A.a(s([0,0,32776,33792,1,10240,0,0]),t.t)
 B.XL=new A.dN(0,"displayLarge")
 B.XM=new A.dN(1,"displayMedium")
 B.XN=new A.dN(2,"displaySmall")
@@ -99870,13 +99867,13 @@ B.m5=new A.dN(7,"bodyMedium")
 B.XQ=new A.dN(8,"bodySmall")
 B.hZ=A.a(s([B.XL,B.XM,B.XN,B.AZ,B.B_,B.XO,B.XP,B.m5,B.XQ]),A.af("w<dN>"))
 B.kO=A.a(s(["p","h1","h2","h3","h4","h5","h6","li","blockquote","pre","ol","ul","hr","table","thead","tbody","tr"]),t.s)
-B.oU=A.a(s([B.dO,B.hy,B.hz,B.p,B.S,B.dP,B.aO,B.hA,B.f_]),A.af("w<eR>"))
-B.oV=A.a(s(["text","multiline","number","phone","datetime","emailAddress","url","visiblePassword","name","address","none"]),t.s)
+B.oT=A.a(s([B.dO,B.hy,B.hz,B.p,B.S,B.dP,B.aO,B.hA,B.f_]),A.af("w<eR>"))
+B.oU=A.a(s(["text","multiline","number","phone","datetime","emailAddress","url","visiblePassword","name","address","none"]),t.s)
 B.Jm=A.a(s(["click","scroll"]),t.s)
 B.kP=A.a(s([0,0,26498,1023,65534,34815,65534,18431]),t.t)
 B.JH=A.a(s([]),t.QP)
 B.i_=A.a(s([]),t.jy)
-B.oY=A.a(s([]),A.af("w<aXv>"))
+B.oX=A.a(s([]),A.af("w<aXv>"))
 B.JF=A.a(s([]),t.IF)
 B.Jz=A.a(s([]),t.D)
 B.JE=A.a(s([]),t.lX)
@@ -99895,9 +99892,9 @@ B.a_6=A.a(s([]),t.nk)
 B.JB=A.a(s([]),t.fm)
 B.kR=A.a(s([]),t.p)
 B.JD=A.a(s([]),t.lD)
-B.oZ=A.a(s([]),t.up)
-B.oX=A.a(s([]),t.t)
-B.oW=A.a(s([]),t.ee)
+B.oY=A.a(s([]),t.up)
+B.oW=A.a(s([]),t.t)
+B.oV=A.a(s([]),t.ee)
 B.JC=A.a(s([]),t.iG)
 B.JL=A.a(s([]),t._m)
 B.me=new A.dv(0,"DoubleQuote")
@@ -99920,7 +99917,7 @@ B.fL=new A.dv(16,"ZWJ")
 B.mh=new A.dv(17,"WSegSpace")
 B.B5=new A.dv(18,"Unknown")
 B.JM=A.a(s([B.me,B.ew,B.b4,B.j_,B.j0,B.mi,B.fM,B.Ys,B.fN,B.fO,B.bU,B.mf,B.mg,B.fK,B.cr,B.iZ,B.fL,B.mh,B.B5]),A.af("w<dv>"))
-B.p_=A.a(s([B.kC,B.hP,B.f6,B.hS,B.hW,B.dT,B.oJ,B.kN,B.bz,B.hX,B.d7,B.f3,B.f4,B.hQ,B.f5,B.kD,B.cB,B.kE,B.kF,B.oH,B.by,B.hR,B.f7,B.f8,B.kG,B.kH,B.kI,B.kJ,B.oI,B.kK,B.kL,B.hT,B.f9,B.fa,B.kM,B.hU,B.hV]),A.af("w<bN>"))
+B.oZ=A.a(s([B.kC,B.hP,B.f6,B.hS,B.hW,B.dT,B.oJ,B.kN,B.bz,B.hX,B.d7,B.f3,B.f4,B.hQ,B.f5,B.kD,B.cB,B.kE,B.kF,B.oH,B.by,B.hR,B.f7,B.f8,B.kG,B.kH,B.kI,B.kJ,B.oI,B.kK,B.kL,B.hT,B.f9,B.fa,B.kM,B.hU,B.hV]),A.af("w<bN>"))
 B.HL=new A.fX(60267,"Ionicons","ionicons",!1)
 B.QN=new A.iE(B.HL,"Open Source","I love open source and I try to contribute to it as much as I can.",0,"openSource")
 B.HU=new A.fX(60847,"Ionicons","ionicons",!1)
@@ -99953,7 +99950,7 @@ B.la=new A.hO(5,"numLockModifier")
 B.lb=new A.hO(6,"scrollLockModifier")
 B.lc=new A.hO(7,"functionModifier")
 B.v8=new A.hO(8,"symbolModifier")
-B.p0=A.a(s([B.e2,B.e3,B.e4,B.e5,B.l9,B.la,B.lb,B.lc,B.v8]),A.af("w<hO>"))
+B.p_=A.a(s([B.e2,B.e3,B.e4,B.e5,B.l9,B.la,B.lb,B.lc,B.v8]),A.af("w<hO>"))
 B.vi=new A.m1(0,"bassiuzDev")
 B.Nt=new A.m1(1,"typefaceScale")
 B.vj=new A.m1(2,"mockupPage")
@@ -99968,6 +99965,9 @@ B.vc=new A.i(0,-1)
 B.ML=new A.i(1,-1)
 B.i1=A.a(s([B.e7,B.MJ,B.fn,B.N2,B.vd,B.N3,B.vc,B.ML]),t.yv)
 B.i2=A.a(s([0,0,24576,1023,65534,34815,65534,18431]),t.t)
+B.uW=new A.fd("Nederlands","# Artificial Intelligence in mijn software.\n\nIk gebruik Artificial Intelligence in het ontwikkelen van mijn software. Deze techniek is een enorme versneller in het proces en een gereedschap waarmee ik mijn kennis kan verbreden. AI is geen vervanging voor creativiteit, en geen reden om niet scherp te zijn op softwareveiligheid & bruikbaarheid en heeft nooit de overhand in technische keuzes. Dit manifest omschrijft de afwegingen die ik elke keer maak bij het inzetten van Artificial Intelligence in wat ik maak. \n\n---\n\nMet het groeiende gebruik van AI in de wereld bij het maken van zo ongeveer alles ontstaat bij veel mensen een weerstand; bij mij ook. Ik kan niet meer over straat zonder smakeloze AI posters te zien vol met dezelfde stijl tekst, snorharen en overduidelijk fake mensen of fake producten. AI slop is overal om ons heen en de natuurlijke reactie om niks met AI te maken te hebben is erg natuurlijk. \nOok binnen Software Development is deze AI Slop boom gaande. Op elk gebied, elke hobby, elke game komen er software tools als paddenstoelen uit de grond. Iedereen kan nu opeens een stukje software maken, zomaar ergens neerzetten en daarna kijken we wel wat er mee gebeurt. Veiligheid van software is daarom een oprechte zorg, en voor een gebruiker is het vaak ook een investering om nieuwe software te gaan gebruiken. Als je er later achter komt dat het slecht in elkaar zit, of vlug niet meer wordt ondersteund, is dat een flinke domper. \n\nIk heb meer dan een decennium ervaring in het schrijven van software binnen meerdere disciplines, en zou ook prima een mooi product kunnen maken zonder gebruik van AI die me helpt in het schrijven van mijn code. Ik denk alleen dat deze houding van alles of niets zonde is; er zijn namelijk dingen waar AI ontzettend goed in is en waar het een gemiste kans zou zijn om dit niet als verlengde van je eigen skills te gebruiken. Maar het is ook niet meer dan dat, een stuk gereedschap als verlengde van je eigen vaardigheden. En in al die jaren software development denk ik dat ik sterk door heb welke disciplines nog een menselijke input nodig hebben.\n\n## Softwareveiligheid\nEen AI model stelt natuurlijk code voor die ze al vaker gezien heeft. Dat is niet per definitie veilige code. Als je andere mensen gebruik laat maken van jouw software, is het jouw verantwoordelijkheid om goed om te gaan met de data van jouw gebruikers. Dit is niet de verantwoordelijkheid van een AI agent, en daarom is het belangrijk om kritische onderdelen van software altijd goed te blijven controleren op mogelijke problemen op security vlak. Dit is niet anders dan een goede security review over een stuk code die ik zou doen bij een collega software developer. Safety first!\n\n## Bruikbaarheid & betrouwbaarheid\nEen AI model zal niet tegenstribbelen als er op dezelfde pagina honderden functies worden toegevoegd, als er functies niet goed werken of als iets stuk gaat als je van tijdzone verandert. Hoe ontwerp je een goed stuk software, hoe zorg je ervoor dat gebruikers begrijpen wat er gebeurt en hoe bouw je software die nu werkt en ook blijft werken. Dit stukje bruikbaarheid is absoluut niet vanzelfsprekend van puur AI gegenereerde software, en vergt vaak nog heel veel afstemming op basis van ervaring van een goede ontwikkelaar.\n\n## Creativiteit\nDe techniek in een LLM zoals we hem nu zien is inschatten wat de meest waarschijnlijke uitkomst op een vraag van de gebruiker is. Van alle duizenden, dan niet miljoenen, vergelijkbare voorbeelden die het model heeft gezien gaat het kijken wat het meest voorkomende voorbeeld is wat voldoet aan de vraag die de gebruiker stelt. Als je vraagt naar de omschrijving van een piraat, krijg je een man met een baard, haak op een boot met een zwarte vlag; puur omdat dat het meeste voorkomt in het bronmateriaal.\n\nMenselijke creativiteit is het mooie vinden in de onvoorspelbaarheid van de mens. De imperfectie van een kwaststrook op een schildersdoek. De timing in de grap van een comediant. Het mooie vinden in iets bedenken wat iemand nog nooit heeft bedacht of opgeschreven.\n\nIets helemaal nieuws maken is iets wat AI niet kan. In essentie is het goed in dingen te kopi\xebren en die samen te voegen. Alle creativiteit, al het nieuwe, moet uit de mens komen die creatief denkt en bezig is. Zonder creatieve sturing maakt een AI model een kopie van wat ze eerder gezien heeft.\n\n## Kritisch denkvermogen\nAI agents zijn echte yes-men. Ze zoeken naar het antwoord waar jij het meest waarschijnlijk naar zoekt. Het gaat om constante bevestiging van hoe jij de vraag in steekt. Als je vraagt 'ik heb vandaag toch geen paraplu nodig?' dan heb je volgens het model geen paraplu nodig, terwijl als je vraagt 'Zal ik een paraplu meenemen vandaag?' je een ja krijgt. \nEen AI model kan nooit het kritisch denken vervangen. Het maken van keuzes, zoals het gebruik van AI bijvoorbeeld, is er niet een die je kan laten vervangen door AI. Voor het schrijven van dit manifest en voor vrijwel elke andere tekst die ik schrijf komt geen AI aan te pas. Schrijven is denken, en dat kritisch denken kan je niet overlaten aan een AI model.\n\n## Ethische overwegingen\nHet zijn niet alleen technische keuzes die mensen doen overwegen om niks met AI te maken te hebben. De impact die de datacenters van AI bedrijven hebben op het milieu, of het zonder toestemming gebruiken van bronmateriaal om AI modellen mee te trainen en vervolgens geen cent terug te betalen aan de originele auteurs zijn verwerpelijk. Toch kies ik er voor om, op dit moment, gebruik te maken van deze AI modellen. Ik doe dit met de overweging dat ik elders meer impact kan maken met mijn stem. Regulering op AI bedrijven zou wat mij betreft moeten komen van bovenaf. Zelfs als elke consument los besluit om geen gebruik te maken van AI denk ik dat het binnen de corporate wereld altijd zijn toepassing zal gaan vinden. Dus zelfs als ik besluit mijn portemonnee dicht te houden en niet mee te doen denk ik dat ik de wereld er niet meer verander. Ik hoop dat ik met het maken van mooie software juist wel impact kan maken.\n\n\n\nHet is voor mij een constante overweging wat ik op welke manier inricht met AI. Ik neem het niemand kwalijk als ze er een andere mening op na laten, en dat dat een overweging kan zijn om geen gebruik te maken van mijn software. Ik hoop alleen dat ik overtuigend ben geweest in het feit dat ik mijn best doe om in een snel veranderende wereld mijn verantwoording te nemen als het gaat over het gebruik van Artificial Intelligence. Ik sta open voor respectvolle discussie over mijn standpunt hierin, en ik probeer hier zo veel mogelijk transparantie in te bieden.\n\nAl met al hoop ik dat ik met mijn software een positieve impact maak op mensen die het gebruiken, en dat ik dit op een verantwoordelijke manier kan blijven doen.\n\nBas de Vaan  \n28 oktober 2026\n",0,"nl")
+B.Lx=new A.fd("English","# Artificial Intelligence in my software.\n\nI use Artificial Intelligence while developing my software. This piece of technology brings a huge acceleration and is a good tool to broaden my knowledge. AI will never be a replacement for creativity, is no reason to not be critical on software security and usability and never has the upper hand in making technical choices. This manifest describes the choices I make every time I decide to use AI in what I develop.\n\n---\n\nWith the growing use of AI in the world in making basically everything there is an understandable resistance, something I feel myself too. I can't go outside without seeing the same tasteless AI posters in the street. The same text styles, whiskers around titles and obvious fake people or products on it. AI slop is everywhere around us and it's a very natural reaction to reject everything regarding AI. Also in the field of Software Development is a boom in AI slop. On every field, every hobby, every game there are new tools that swarm the field. Everybody can now write a piece of software, put it somewhere for people to use and then just see what happens. Security in software is a real concern, and for a user it's an investment to start using a new software tool. If they find out later that it's not built well, or is quickly discontinued, it is a big disappointment.\n\nI have more than a decade of experience in writing software within multiple disciplines, and would be capable of building a nice product without the use of AI. However I think that this all or nothing approach is a real waste. There are things that AI is really good at and it's a missed opportunity to not use this as an extent of your own skills. But it's also not more than that, it should be used as an extent of one's skills. In all those years I've been doing software development, I think I got a good grip on what disciplines still need human input.\n\n## Software security\nAn AI model obviously suggests code that it has seen before. That code is not secure code by definition. If you publish your code somewhere and let other people use your software, it's your responsibility to take care of the data of your users. It's not the responsibility of any AI Agent, and that's why it's important to always have a critical eye on pieces of software that can create problems on the security axis. And this critical eye is not any different than I would when reviewing code of another software developer within my team. Safety first!\n\n## Usability & reliability\nAn AI model will not complain if there are hundreds of new features added to a page, if features don't function well or if something breaks when you for example change timezones. How do you design a good piece of software? How do you make sure your users understand what is happening and how do you build software that works now but also works in ten years? This piece of usability is absolutely not guaranteed with AI generated software and needs a lot of finetuning from an experienced developer.\n\n## Creativity\nThe technology that is an LLM like we see it now is based on estimate what the most likely answer is to the question the user is asking. From all thousands if not millions comparable examples the model has seen, it proposes the answer that it has seen the most. If you ask for a pirate, you get a man with a beard, a hook and on a boat with a black flag; just because this is what the model has seen the most in its training set.\n\nHuman creativity is finding the beauty in the unexpected. The imperfection of a brushstroke on a canvas. The timing in the joke of a comedian. Finding beauty in something that nobody has thought or written down before.\n\nCreating something completely new is just not something that AI is capable of right now. In its core it is very good in copying things that it has seen a lot and adding that together. All creativity, all the new things, has to come from a human that keeps thinking and uses their creativity. Without any creative guidance, AI just makes stuff it has seen again and again.\n\n## Critical thinking\nAI Agents are real yes-men. They are proposing the answer that you are looking for most likely. It's about a validation in how you ask the question. If you ask 'I won't need an umbrella today, right?', the model will say that you indeed probably won't. But if you ask it 'Is it a good idea to take my umbrella with me?', it'll suggest you take it with you. \n\nAn AI model can never replace critical thinking. Making choices in life and being aware of things, just like my considerations here in using AI, can never be done by an AI model. No AI has been used to write this manifest, and basically every text I write is written purely by me. Writing is thinking, and critical thinking is not something that can be replaced.\n\n## Ethical considerations\nThere are not only technical considerations that need to be made regarding AI. The impact that AI datacenters have on the environment and the usage of training data without asking for permission or any form of compensation is reprehensible. And even with that in mind I choose to, at this moment, use AI to create new software. I do this with the consideration that I can make more impact in other choices I make in life. I think AI companies should be better regulated from the top down, and even if all consumers stop using AI, it will find its way in corporate life. So even if I decide to keep my wallet closed regarding to AI, I don't think that would change the world in a tiny bit. I hope I can make impact in the world with creating nice software that people can use.\n\n\nFor me it is an ongoing consideration in what I do with AI and how I use AI for those tasks. I don't blame anyone for having a different opinion, and that that is a consideration to not use my software. I hope that I've been convincing in the fact that I try my best to be responsible in my AI usage in a world that's moving very fast. I'm open to a respectful debate about my point of view, and will try to be as transparent as possible about this.\n\nAll in all, I hope that my software can make a positive impact for people that use it, and that I can keep doing this in a responsible way.\n\nBas de Vaan  \nOctober 28th 2026 \n",1,"en")
+B.p0=A.a(s([B.uW,B.Lx]),A.af("w<fd>"))
 B.aj=new A.eH(0,"icon")
 B.aH=new A.eH(1,"input")
 B.a8=new A.eH(2,"label")
