@@ -1,0 +1,21 @@
+{
+  "runs": [
+    {
+      "name": "basdevaan-new",
+      "date": "2026-11-04",
+      "score": 16,
+      "direction": {
+        "ground": {
+          "h": 48,
+          "s": 12,
+          "l": 92
+        },
+        "signal": {
+          "h": 74,
+          "s": 64,
+          "l": 16
+        }
+      }
+    }
+  ]
+}
