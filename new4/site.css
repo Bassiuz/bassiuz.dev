@@ -276,7 +276,9 @@ main, .footer { position: relative; z-index: 2; }
   .js .reveal, .js .clip img, .js [data-rise] span, .tilt { transform: none !important; clip-path: none !important; }
   .js .reveal { transition: opacity .3s ease; }
   .js .hero-title .ch, .js .hero-hello, .js .hero-role { animation: fade .3s ease both; }
-  .hero-grid, .hero-plumb, .cursor, .shots-track { animation: none; }
+  .hero-grid, .hero-plumb, .cursor { animation: none; }
+  /* The carousel is the only way to see every screen, so it keeps going, at half speed. */
+  .shots-track { animation-duration: calc(var(--loop, 120s) * 2); }
   .sp, .swap, .tld { transition-duration: 0s, 0s, .3s; }
   ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
 }
