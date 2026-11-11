@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0a08">
+<title>Fixing FVM With an open source mindset!, Bas de Vaan</title>
+<meta name="description" content="After encoutering problems in FVM 3, I contributed in fixing the problem!">
+<link rel="canonical" href="https://basdevaan.nl/new2/b/fixing-fvm/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preload" href="/new2/fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/new2/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/new2/site.css">
+<script>document.documentElement.classList.add('js');try{if(sessionStorage.getItem('curtain')){sessionStorage.removeItem('curtain');document.documentElement.classList.add('arriving')}}catch(e){}</script>
+<script src="/new2/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true" data-progress></div>
+<header class="bar" data-bar>
+  <a class="wordmark" href="/new2/">Bas de Vaan</a>
+  <nav aria-label="Main">
+    <a href="/new2/blog/" aria-current="page"><span data-scramble>Blog</span></a>
+    <a href="/new2/ai/en/"><span data-scramble>AI<span class="long"> manifest</span></span></a>
+    <a href="/playground/fluidui"><span data-scramble>Playground</span></a>
+  </nav>
+  <a class="button button-small" href="mailto:b@sdevaan.nl?subject=Hi%20Bas"><span data-scramble>Email me</span></a>
+</header>
+<main id="main">
+<article class="article">
+  <header class="article-head">
+    <p class="label reveal"><a href="/new2/blog/">Blog</a> &middot; Open source &middot; <time datetime="2024-02-29">29 February 2024</time></p>
+    <h1 data-split>Fixing FVM With an open source mindset!</h1>
+    <p class="article-lead reveal">After encoutering problems in FVM 3, I contributed in fixing the problem!</p>
+  </header>
+  <figure class="article-banner"><img src="/assets/assets/blogpost/fixing-fvm/tweet.png" alt=""></figure>
+  <div class="prose">
+<h2>Fixing FVM with an open source mindset!</h2>
+<p>FVM 3.0.0 was released to the public this month, and before trying it out myself I read a couple of warning signs on Twitter, Slack and Discord of people having issue with their FVM installations.I was cautious about this myself. Instead of confronting the problems, I opted to continue using FVM 2 for the time being and planned to upgrade when most issues were resolved. This is typically a sensible approach.</p>
+<p><img loading="lazy" src="/assets/assets/blogpost/fixing-fvm/slack.png" alt="Untitled"></p>
+<p>However, our genius infra wizard Tom, as per our agreement, upgraded our CI machine and with that, he updated FVM to FVM 3 without even knowing about it! Then it happened, ‘the morning after’, all of our Flutter pipelines just went red! ❌</p>
+<p>The easy solution would be putting my head in the sand again and reverting back to FVM 2.x.x, but that didn’t sound like the best solution. Eventually we wanted to migrate to FVM 3, so fix the issue rather then go back to the old version sounds like the better solution. So lets do a good stretch and dive right in!</p>
+<h2>The problem</h2>
+<p>Whenever we ran FVM in our CI, it weirdly kept prompting us with a problem:</p>
+<pre><code class="language-java"> No pubspec.yaml detected in this directory
+</code></pre>
+<p>But I was actually pretty sure we ran the FVM function in a folder with a pubspec.yaml file! After triple checking this on our build machine and trying some manual FVM usages, I started researching this issue and found a open ticket on the FVM Github page: </p>
+<p><a href="https://github.com/leoafarias/fvm/issues/638" rel="noopener" target="_blank">https://github.com/leoafarias/fvm/issues/638</a></p>
+<p>The problem&#39;s description was somewhat unclear, but it seemed to match the issue I was experiencing. At the time of researching it was an open issue, so I added to the issue that I also encountered this problem and was able to help reproducing it if possible. But at that moment the yearly goal of Dutch Coding Company struck to my head; open source contributions! This was my moment to shine and help out figuring out what was happening.</p>
+<p>I cloned FVM locally to my machine and started searching around. I figured out it had to do with a commented out function in the findAncestor function that finds where the FVM project is actually located. When re-enabling this line, FVM worked for me again so I submitted a pr to re-enable this. However; Leo Farias, the main developer of FVM was quick to reply that this would disable mono repository support. </p>
+<p>After some back and forth between me and Leo (you can read the exact messages in the Github issue), we found out that this was caused by a FVM configuration somewhere higher in the hierarchy of my folder structure! By removing this FVM configuration, the pipeline worked again! Leo also made an extra fix to prevent some of these problems in the future and remove the out commented functions. Great! 🎉 </p>
+<p>And with that I thought all our problems were fixed and I could go on my merry way. Until the 3rd step of our pipeline failed and made me type this message out of disbelief;</p>
+<p><img loading="lazy" src="/assets/assets/blogpost/fixing-fvm/aaahhhhh.png" alt="Untitled"></p>
+<p>AAAAAAAH! Flutter SDK 3.19.0_x86_64 is not valid Flutter version! Back to square one!</p>
+<h2>The Problem 2: Electric Boogaloo</h2>
+<p>Let me first explain a bit more about this specific Flutter version. In our Flutter projects we make use of Golden Tests. Golden Tests are tests where a part of the app gets rendered in the test engine and compared to a screenshot of that rendering. This makes sure that a widget looks exactly like intended, and we can check it against verification images. If a widget changed, we can change those verification images as well. However; due to a very <em>very</em> small difference in how Flutter renders widgets in x86_64 processor architectures and Apple Silicon processor architectures, we kept having issues with slightly different images.</p>
+<p>This is why we wrote a script that installs a x86_64 version of Flutter during the testing step of our pipeline and uses that, even if the machine is a Apple Silicon machine. This way, it uses the exact same version of Flutter to render and check the images. We managed this by downloading the zip and putting it in a folder where FVM managed its versions. This worked great for us!</p>
+<p>.. Until FVM 3!</p>
+<p>FVM 3.0.0 had a lot of quality of life upgrades; including this one. Whenever you select a certain Flutter version, it checks if the provided Flutter version ‘makes sense’. Our weird Flutter version name was of course not a valid Flutter version; but a custom thing. And custom here is the key word, I figured out it was possible to add &#39;custom_&#39; as a prefix to the Flutter version and FVM would see it as a custom installation! Which sounded great for this solution; as you would expect that it wouldn’t check a custom version on its naming right? ❌ Wrong! It still did that. Weird! And what if you add a &#39;--force&#39; parameter to force it through the questions. This wouldn&#39;t prompt you with a question, right? Right?</p>
+<p><img loading="lazy" src="/assets/assets/blogpost/fixing-fvm/meme.png" alt="Untitled"></p>
+<p>Well you would’ve probably guessed it, this was unfortunately not the solution to our problem.</p>
+<p>However, I personally thought that it should work this way. So I <a href="https://github.com/leoafarias/fvm/issues/653" rel="noopener" target="_blank">opened another issue on Github</a>, created a fork of FVM and started working on a fix! After a couple of hours tinkering, I found a good solution and <a href="https://github.com/leoafarias/fvm/pull/654" rel="noopener" target="_blank">created the pull request to fix the problem 🙂!</a></p>
+<p>This started the waiting process. Leo is a very quick responder on Github, but we were operating in totally different timezones. So Leo was still asleep! In the meanwhile I installed my FVM fork on our build machine to test and all our pipelines were back up again!</p>
+<p>After fixing some sensible review comments, Leo <a href="https://github.com/leoafarias/fvm/pull/654#pullrequestreview-1903513148" rel="noopener" target="_blank">approved the pull request</a> and just a couple of days later the fix is available for everybody :)</p>
+<p>It was very cool to work on tooling I think is essential in the Flutter developer space. I literally use FVM every day and it makes working on multiple projects with multiple different Flutter versions bearable!</p>
+<p><img loading="lazy" src="/assets/assets/blogpost/fixing-fvm/contributors.png" alt="Screenshot 2024-02-28 at 13.33.28.png"></p>
+<h2>Bonus Problem - helpful prompts</h2>
+<p>Before we go I have a bonus problem I encountered while writing this blogpost! I was releasing a project that was ready to be merged for some time now; so all pipelines were green, everything was ready to go! But in the meantime FVM got updated, but we fixed that, right… right?</p>
+<p><img loading="lazy" src="/assets/assets/blogpost/fixing-fvm/asdf.png" alt="Untitled"></p>
+<p>Don’t forget to add &#39;.fvm&#39; to your &#39;.gitignore&#39; ;)</p>
+<p>Big thanks to all you readers for getting to the bottom of my blog! If you have any questions about my contribution to FVM or anything else, feel free to reach out on X (<a href="https://twitter.com/Bassiuz" rel="noopener" target="_blank">@Bassiuz</a>), and if you like to read about my adventures within Flutter feel free to follow me as well!</p>
+
+  </div>
+  <nav class="article-nav" aria-label="More posts"><a href="/new2/b/rick-rrrr/"><span class="label">Newer</span>Rick RRRR - Rick Rolling your app users in a vibrating new dimension!</a><a href="/new2/b/flutter-recap-2023/"><span class="label">Older</span>A Flutter Developer’s Recap of 2023</a></nav>
+</article>
+</main>
+<footer class="footer">
+  <div class="footer-cols">
+    <div><p class="label">Pages</p><ul>
+      <li><a href="/new2/">Home</a></li><li><a href="/new2/blog/">Blog</a></li>
+      <li><a href="/new2/ai/en/">AI manifest</a></li><li><a href="/playground/fluidui">Fluid UI playground</a></li></ul></div>
+    <div><p class="label">Elsewhere</p><ul><li><a href="https://github.com/bassiuz" rel="noopener">GitHub</a></li><li><a href="https://www.linkedin.com/in/bas-de-vaan-31609046/" rel="noopener">LinkedIn</a></li><li><a href="https://twitter.com/Bassiuz" rel="noopener">Twitter</a></li><li><a href="https://medium.com/@bassiuz" rel="noopener">Medium</a></li></ul></div>
+    <div><p class="label">Write to me</p><ul><li><a href="mailto:b@sdevaan.nl?subject=Hi%20Bas">b@sdevaan.nl</a></li><li>Replies within a few days</li></ul></div>
+    <div><p class="label">Latest post</p><ul><li><a href="/new2/b/mtga-set-swapper/">From RCQ Prep to Open Source: The Story of the MTG Arena Set Swapper</a></li><li>8 October 2025</li></ul></div>
+  </div>
+  <p class="footer-mark" aria-hidden="true" data-rise><span>b@sdevaan.nl</span></p>
+  <p class="footer-legal"><span>Thank you for getting all the way to the bottom of the page.</span><span>&copy; 2026 Bas de Vaan</span></p>
+</footer>
+</body>
+</html>
