@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#06031a">
+<title>Rick RRRR - Rick Rolling your app users in a vibrating new dimension!, Bas de Vaan</title>
+<meta name="description" content="Did you ever want to silently Rick Roll your app users? Then Rick RRRR is for you!">
+<link rel="canonical" href="https://basdevaan.nl/new4/b/rick-rrrr/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preload" href="/new4/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/new4/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/new4/site.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="/new4/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true" data-progress></div>
+<div class="glow" aria-hidden="true" data-glow></div>
+<header class="bar" data-bar>
+  <a class="wordmark" href="/new4/" data-mail-trigger>B@sdevaan.nl</a>
+  <nav aria-label="Main">
+    <a href="/new4/blog/" aria-current="page">Blog</a>
+    <a href="/new4/ai/en/">AI</a>
+    <a href="/playground/fluidui">Playground</a>
+  </nav>
+</header>
+<main id="main">
+<article class="article">
+  <header class="article-head">
+    <p class="label reveal"><a href="/new4/blog/">Blog</a> / Open source / <time datetime="2024-04-01">1 April 2024</time></p>
+    <h1 class="reveal">Rick RRRR - Rick Rolling your app users in a vibrating new dimension!</h1>
+    <p class="article-lead reveal">Did you ever want to silently Rick Roll your app users? Then Rick RRRR is for you!</p>
+  </header>
+  <figure class="article-banner frame"><img src="/assets/assets/blogpost/rick-rrrr/rick.png" alt="" style="view-transition-name:banner-rick-rrrr"></figure>
+  <div class="prose">
+<p>Did you ever want to silently Rick Roll your app users? Want to use the best of haptic motors in smartphones for a cool easter egg in your app? Then Rick RRRR is for you! It is easy as one - two - three! In this blogpost I will tell you what Rick RRRR is, why you want it and how it’s made!</p>
+<h3>Key Takeaways</h3>
+<ul>
+<li>Rick RRRR is a fun way to Rick Roll your Flutter app users</li>
+<li>Flutter Gaimon is a nice package to implement haptic feedback into your experience</li>
+<li>Open Source collaboration lets us reach new heights! 🚀</li>
+</ul>
+<h2>Rick RRRR</h2>
+<p>Rick Rolling is a years old joke at this point. But have you ever given other dimensions to this joke? I have seen an <a href="https://www.reddit.com/r/ProgrammerHumor/comments/kt1zz8/i_created_the_worlds_first_scannable_qr_gif/" rel="noopener" target="_blank">animated qr code of Rick Astley</a> some years ago for example (Yes, it dances and it scans!).</p>
+<p>Experimenting with Haptic Feedback gave me the inspiration to developer Rick RRRR, a revolutionary package that brings a vibrating version of Never Gonna Give You Up to you flutter app!</p>
+<p><a href="https://pub.dev/packages/rick_rrrr" rel="noopener" target="_blank">Check out Rick RRRR on pub.dev!</a></p>
+<h2>Getting started</h2>
+<p>First, you will need to add &#39;rick_rrrr&#39; to your &#39;pubspec.yaml&#39;.</p>
+<pre><code>dependencies:
+  flutter:
+    sdk: flutter
+  rick_rrrr: 1.0.0
+</code></pre>
+<p>Then, run &#39;flutter pub get&#39; in your terminal.</p>
+<h3>Usage</h3>
+<p>Usage is very simple, just import and run;</p>
+<pre><code>Rick.rrrr();
+</code></pre>
+<p>Adding a easter egg is not going to get easier!</p>
+<h2>Gaimon</h2>
+<p><img loading="lazy" src="/assets/assets/blogpost/rick-rrrr/gaimon.jpg" alt="gaimon.jpg"></p>
+<p>When researching different haptic feedback solutions in Flutter, I encountered <a href="https://pub.dev/packages/gaimon" rel="noopener" target="_blank">Flutter Gaimon.</a> Gaimon is a package to add Haptic Feedback in a very easy way. It supports different basic events in a very simple way. This makes adding Haptic Feedback to your app nice and easy!</p>
+<p>The application even supported custom patterns for designing your own Haptic Feedback designs! But…</p>
+<h2>Ahap support for Android</h2>
+<p><img loading="lazy" src="/assets/assets/blogpost/rick-rrrr/faq.png" alt="Untitled"></p>
+<p>… unfortunately, Gaimon was missing support for custom patterns on Android! For another app project I really wanted to have access to advanced custom patterns for Haptic Feedback, preferably with comparable experiences on all types of phones. </p>
+<p>The author was asking for help on supporting custom patterns for Android, and this felt to me like a beacon of light, calling me to please contribute to this package. I wanted to have access to it anyway, so why not build it in a public space where more people can take advantage?</p>
+<h2>What is an AHAP</h2>
+<p>.ahap is a file extension for specifiying haptic feedback, and it’s an abbreviation for Apple Haptic and Audio Pattern. Designed by Apple specifically for controlling Haptic Feedback on Apple devices, it should come as a obvious thing that it works great for iPhones. </p>
+<p>Android is a whole different biscuit, as they say. Since even the motor in the devices has a completely different way of operating (A tapping vs a rotating vibration motor), triggering it is completely different.</p>
+<p>Fortunately, <a href="https://developer.apple.com/documentation/corehaptics/representing-haptic-patterns-in-ahap-files" rel="noopener" target="_blank">the documentation of the .ahap standard</a> is very clear. By using this documentation, I was able to convert some of the details that were put in the .ahap spec to a waveform of timings and amplitudes. This gave a similar experience, at least similar enough that most .ahap files of vibrations could be recognized compared to their iOS counterpart. </p>
+<p><img loading="lazy" src="/assets/assets/blogpost/rick-rrrr/comments.png" alt="Untitled"></p>
+<p>Before finishing up the pull request, I already created some traction for this new feature! The creator of the gaimon package was fast to check the code out and merge it.</p>
+<p>There are still some extra features we want to implement, but this sounds like a good beginning for .ahap support in Android!</p>
+<h2>Looping back to Rick RRRR</h2>
+<p>The final test for me would be to get a very advanced vibration file and test it on an Android device. I found the <a href="https://github.com/ryendu/sound2ahap" rel="noopener" target="_blank">sound2ahap</a> repository which made me aware of the ability to convert music to vibrations 🤯. This gave me the ultimate idea of Rick Rolling someone with vibration!</p>
+<p>The sound2ahap package didn’t give me enough tools to actually convert the song to vibrations, so I bought an extra software toolkit called Haptrix, specifically designed to design your own vibrations and share them with the Haptrix community. This tool had a sound to haptics converter to create the perfect .ahap file. </p>
+<p>I put all this together and this way, the Rick RRRR package was born!</p>
+<h2>Wrapping up</h2>
+<p>Writing this package has been a whole lot of fun, and the end result is very funny. But behind it is a open source collaboration I am proud of and that I’m going to use for clients in the future. </p>
+<p>If you want to read more about my open source adventures, check out my previous blogs on here, or follow me on <a href="https://x.com/bassiuz" rel="noopener" target="_blank">X</a> (<a href="https://x.com/bassiuz" rel="noopener" target="_blank">https://x.com/bassiuz</a>)</p>
+
+  </div>
+  <nav class="article-nav" aria-label="More posts"><a href="/new4/b/mtga-set-swapper/"><span class="label">Newer</span>From RCQ Prep to Open Source: The Story of the MTG Arena Set Swapper</a><a href="/new4/b/fixing-fvm/"><span class="label">Older</span>Fixing FVM With an open source mindset!</a></nav>
+</article>
+</main>
+<footer class="footer">
+  <img class="footer-bg" src="/assets/assets/images/nature-min-min.jpg" width="1365" height="937" alt="" loading="lazy">
+  <p class="footer-thanks reveal">Thank you for getting all the way to the bottom of the page</p>
+  <ul class="footer-socials reveal"><li><a href="https://twitter.com/Bassiuz" rel="noopener">Twitter</a></li><li><a href="https://medium.com/@bassiuz" rel="noopener">Medium</a></li><li><a href="https://www.linkedin.com/in/bas-de-vaan-31609046/" rel="noopener">LinkedIn</a></li><li><a href="https://github.com/bassiuz" rel="noopener">GitHub</a></li></ul>
+  <p class="footer-mark" aria-hidden="true" data-rise><span>b@sdevaan.nl</span></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#06031a">
+<title>How to transform your widget testing setup into a widget library with Widgetbook, Bas de Vaan</title>
+<meta name="description" content="Recently, I was inspired by a talk from Lucas about Widgetbook. This inspired me to try using Widgetbook in our current projects, while minimising the amount of new code and keeping maintenance costs to a minimum. In this blog post, I will share the approach I came up with.">
+<link rel="canonical" href="https://basdevaan.nl/new4/b/widgetbook-testing/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preload" href="/new4/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/new4/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/new4/site.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="/new4/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true" data-progress></div>
+<div class="glow" aria-hidden="true" data-glow></div>
+<header class="bar" data-bar>
+  <a class="wordmark" href="/new4/" data-mail-trigger>B@sdevaan.nl</a>
+  <nav aria-label="Main">
+    <a href="/new4/blog/" aria-current="page">Blog</a>
+    <a href="/new4/ai/en/">AI</a>
+    <a href="/playground/fluidui">Playground</a>
+  </nav>
+</header>
+<main id="main">
+<article class="article">
+  <header class="article-head">
+    <p class="label reveal"><a href="/new4/blog/">Blog</a> / Open source / <time datetime="2023-08-08">8 August 2023</time></p>
+    <h1 class="reveal">How to transform your widget testing setup into a widget library with Widgetbook</h1>
+    <p class="article-lead reveal">Recently, I was inspired by a talk from Lucas about Widgetbook. This inspired me to try using Widgetbook in our current projects, while minimising the amount of new code and keeping maintenance costs to a minimum. In this blog post, I will share the approach I came up with.</p>
+  </header>
+  <figure class="article-banner frame"><img src="/assets/assets/blogpost/widgetbook-testing/widgetbook-banner.jpg" alt="" style="view-transition-name:banner-widgetbook-testing"></figure>
+  <div class="prose">
+<h2>How to transform your widget testing setup into a widget library with Widgetbook</h2>
+<ul>
+<li>Widgetbook is a generated UI component library inspired by Storybook.js</li>
+<li>Usually it is costly for small projects to maintain a UI component library</li>
+<li>Using Widgetbook in your tests makes it maintenance cost of your UI component library low</li>
+</ul>
+<p><strong>Recently, I was inspired by a talk from <a href="https://twitter.com/LucasJosefiak" rel="noopener" target="_blank">Lucas</a> about Widgetbook. This inspired me to try using Widgetbook in our current projects, while minimising the amount of new code and keeping maintenance costs to a minimum. In this blog post, I will share the approach I came up with.</strong></p>
+<p>Widgetbook is a UI component library inspired by Storybook.js. It provides a clear folder structure to display various UI components. These components are generated from your actual code, so you can see how they look in your application. The component library is interactive, allowing you to test the behavior of elements to user input, hover, and click. You can also provide different variations and options for your components to make it clear which variants of your elements are usable. You can host this library online to share it with clients, other developers, and designers. If you want to see the potential of a widget book, <a href="https://demo.widgetbook.io/#/" rel="noopener" target="_blank">checkout their online demo here!</a></p>
+<h2>The struggle of maintaining a component library</h2>
+<p>I recall attending a Javascript meetup and listening to a talk about Storybook. I thought, &#39;This would be great to have in Flutter!&#39; Months later, to my surprise, it actually exists! At a Flutter meetup, <a href="https://twitter.com/LucasJosefiak" rel="noopener" target="_blank">Lucas</a> from Widgetbook gave a fantastic presentation about the tool. Its usage seemed easy and promising, with potential in upcoming features. However, the only issue I struggled with was its maintenance cost. For each entry in Widgetbook, you have to define a use case and maintain any changes to your widgets. Here&#39;s an example of how to define a use case in Widgetbook:</p>
+<pre><code class="language-dart">@widgetbook.UseCase(name: &#39;with no text&#39;, type: TestFieldWidget)
+Widget noTextTestFieldWidget(BuildContext _) {
+  return const TestFieldWidget(text: &#39;&#39;);
+}
+</code></pre>
+<p>So while this use case is pretty small, you can imagine if you have a widget with a lot of options this get very cumbersome. This is an example of a bigger widget (still just a simple checkbox):</p>
+<pre><code class="language-dart">@UseCase(name: &#39;basic&#39;, type: CheckboxInput)
+Widget basicCheckboxInput(BuildContext context, {bool initialValue = false}) {
+  return CheckboxInput(
+    field: CheckBoxFieldType(
+      name: &#39;checkbox&#39;,
+      value: context.knobsOrMock.boolean(label: &#39;checkboxValue&#39;, initialValue: initialValue),
+      type: FieldType.bulletin,
+      label: context.knobsOrMock.string(
+        label: &#39;CheckboxLabel&#39;,
+        initialValue: &#39;checkbox&#39;,
+      ),
+    ),
+    onChanged: (bool? changed) {
+      initialValue = changed ?? false;
+    },
+  );
+}
+</code></pre>
+<p>So you get the gist. To display each element in your Widgetbook, you need to create a function and annotate it as a use case. Fortunately, the Widgetbook code generation tool performs the rest of the magic for you 🔮.</p>
+<p>However, obtaining a Widgetbook using this method felt like more work than I was willing to put in. Ideally, I would like to do as little work as possible. This is what led me to the idea of incorporating it with my widget testing.</p>
+<h2>Combining widgets with testing</h2>
+<p>I already have a robust widget testing setup in most of my applications. We use both Widget testing and Golden Testing to test the behavior, look, and feel of our widgets. Whenever there is a change, we see the impact reflected in our tests, giving us more confidence in developing new features. If a change in one place has an unintended effect on another widget, our tests turn red and alert us to the unwanted side effect. If you&#39;re not already testing your widgets, I highly recommend giving it a try! Golden Tests are low in maintenance cost and feel like low effort for a high reward.</p>
+<p>What do these tests have in common with the use cases used by Widgetbook? In both cases, you need to build the widget you want, isolate it from the rest of the application, and provide it to a framework, whether it be Widgetbook&#39;s or your testing library&#39;s. This led me to look for a way to combine the use cases of Widgetbook with my tests, and I found a &#39;mostly&#39; working solution!</p>
+<p>By just putting the use case functions in the test file itself you can use these functions in your test and annotate them as well. A simple test can look something like this:</p>
+<pre><code class="language-dart">@widgetbook.UseCase(name: &#39;with a lot of text&#39;, type: TestFieldWidget)
+Widget longTextTestFieldWidget(BuildContext _) {
+  return const TestFieldWidget(text: &#39;A very long test to create a certain amount of text to see how it looks like.&#39;);
+}
+
+@widgetbook.UseCase(name: &#39;with no text&#39;, type: TestFieldWidget)
+Widget noTextTestFieldWidget(BuildContext _) {
+  return const TestFieldWidget(text: &#39;&#39;);
+}
+
+void main() {
+  testWidgets(
+    &quot;test description&quot;,
+    (WidgetTester tester) async {
+      Widget widget = Builder(builder: ((context) =&gt; longTextTestFieldWidget(context)));
+      await tester.pumpWidget(widget);
+      expect(
+          find.text(&#39;A very long test to create a certain amount of text to see how it looks like.&#39;), findsOneWidget);
+    },
+  );
+}
+</code></pre>
+<p>It is also possible to provide the initial value of a knob in the function as an optional parameter; this makes it possible to also use the ‘knobs’ in your test. A test for the checkbox that I run in a actual project looks like this:</p>
+<pre><code>@UseCase(name: &#39;basic&#39;, type: CheckboxInput)
+Widget basicCheckboxInput(BuildContext context, {bool initialValue = false}) {
+  return CheckboxInput(
+    field: CheckBoxFieldType(
+      name: &#39;checkbox&#39;,
+      value: context.knobsOrMock.boolean(label: &#39;checkboxValue&#39;, initialValue: initialValue),
+      type: FieldType.bulletin,
+      label: context.knobsOrMock.string(
+        label: &#39;CheckboxLabel&#39;,
+        initialValue: &#39;checkbox&#39;,
+      ),
+    ),
+    onChanged: (bool? changed) {
+      initialValue = changed ?? false;
+    },
+  );
+}
+
+void main() {
+  group(&#39;Checkbox Input Golden Test&#39;, () {
+    GoldenPumpingCompanion companion = defaultPumpingCompanion();
+
+    goldenTest(
+      &#39;renders correctly&#39;,
+      fileName: &#39;checkbox_input_golden_test&#39;,
+      pumpWidget: companion.pumpWidget,
+      builder: () =&gt; companion.buildTestGroup(
+        &#39;default widget&#39;,
+        UseCaseWrapper.wrap((context) =&gt; basicCheckboxInput(context, initialValue: false)),
+      ),
+    );
+
+    goldenTest(
+      &#39;renders correctly&#39;,
+      fileName: &#39;checkbox_input_checked_golden_test&#39;,
+      pumpWidget: companion.pumpWidget,
+      builder: () =&gt; companion.buildTestGroup(
+        &#39;default widget&#39;,
+        UseCaseWrapper.wrap((context) =&gt; basicCheckboxInput(context, initialValue: true)),
+      ),
+    );
+  });
+}
+</code></pre>
+<p>Please keep in mind that I have some extra test helpers and functions here to assist me in building my tests. This way, even a &quot;complicated&quot; widget test appears clean and moreover provides us with both snapshot tests and an entry in our Widgetbook! <a href="https://github.com/Bassiuz/widgetbook_test_setup" rel="noopener" target="_blank">Check out my GitHub repository</a> if you’re looking for a simple example project.</p>
+<h2>Implementing the solution</h2>
+<p>Okay, I have to confess something. When I said I found a &#39;mostly&#39; working solution, I actually meant that it doesn&#39;t work yet. The code generation of the Widgetbook library cannot correctly handle imports from the &#39;test&#39; and &#39;lib&#39; folders. You can fix this by manually adjusting the imports in the file generated by Widgetbook. Remove the imports that start with &#39;asset:&#39; and replace them with actual imports from your project. This will enable Widgetbook to run, but I don&#39;t like making manual changes to generated code. This is especially problematic since it hinders automated deployment of Widgetbook through a pipeline. When I discovered this, I opened <a href="https://github.com/Bassiuz/widgetbook_test_setup" rel="noopener" target="_blank">an issue about this problem in the Widgetbook Github repository.</a></p>
+<p>I wrote this blog while I was at Fluttercon 2023 (read more about it in <a href="Link">my previous blog</a>). At the conference, I had the opportunity to listen to a talk about Widgetbook and check out their booth. The guys from Widgetbook were also in attendance. During the conference, I came up with <a href="https://github.com/Bassiuz/widgetbook_test_setup" rel="noopener" target="_blank">a possible solution to the problem.</a></p>
+<p><a href="https://github.com/Bassiuz/widgetbook/pull/1/files" rel="noopener" target="_blank">https://github.com/Bassiuz/widgetbook/pull/1/files</a></p>
+<p>I had the opportunity to discuss my fix and issue with the developers, who were very open and friendly in their collaboration. Overall, it was a great experience 🙂</p>
+<p><img loading="lazy" src="/assets/assets/blogpost/widgetbook-testing/widgetbook-1.png" alt="Untitled"></p>
+<p>While in the progress of writing and publishing this blogpost, Youssef (pictured on the right) actually used my pull request as inspiration and made a fix for Widgetbook!</p>
+<p><img loading="lazy" src="/assets/assets/blogpost/widgetbook-testing/widgetbook-2.png" alt="Untitled"></p>
+<p>So soon in a new release (or in the git ref) you could try this test setup for yourself! Awesome! 🚀</p>
+<p>EDIT: On the 18th of August, this feature got released in Widgetbook Generator 3.1.0! So update to the latest version and check it out! </p>
+<h2>Wrapping up</h2>
+<p>Regarding the future of Widgetbook, version 3 has recently been released, which includes many new features and a fully-fledged cloud environment. Therefore, adopting and implementing Widgetbook now seems like a good idea, especially for apps with a large assortment of UI elements.</p>
+<p>If you want to know more about how we implemented Widgetbook at Dutch Coding Company or my views on the future of Widgetbook, feel free to send me a message on Twitter (<a href="https://twitter.com/Bassiuz" rel="noopener" target="_blank">@Bassiuz</a>). I love to discuss all things Flutter :)</p>
+
+  </div>
+  <nav class="article-nav" aria-label="More posts"><a href="/new4/b/fluid-ui-in-practice/"><span class="label">Newer</span>Putting Fluid UI into practice</a><a href="/new4/b/fluttercon-2023/"><span class="label">Older</span>Fluttercon 2023 Recap</a></nav>
+</article>
+</main>
+<footer class="footer">
+  <img class="footer-bg" src="/assets/assets/images/nature-min-min.jpg" width="1365" height="937" alt="" loading="lazy">
+  <p class="footer-thanks reveal">Thank you for getting all the way to the bottom of the page</p>
+  <ul class="footer-socials reveal"><li><a href="https://twitter.com/Bassiuz" rel="noopener">Twitter</a></li><li><a href="https://medium.com/@bassiuz" rel="noopener">Medium</a></li><li><a href="https://www.linkedin.com/in/bas-de-vaan-31609046/" rel="noopener">LinkedIn</a></li><li><a href="https://github.com/bassiuz" rel="noopener">GitHub</a></li></ul>
+  <p class="footer-mark" aria-hidden="true" data-rise><span>b@sdevaan.nl</span></p>
+</footer>
+</body>
+</html>
