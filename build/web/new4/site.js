@@ -90,7 +90,6 @@ if (name) {
 const bar = $('[data-bar]');
 const progress = $('[data-progress]');
 const parallax = reduced ? [] : $$('[data-parallax]').map((el) => ({ el, img: $('img', el), f: +el.dataset.parallax }));
-const drift = reduced ? null : $('[data-drift]');
 // How far an element has travelled through the viewport: 0 as its top meets the bottom edge, 1 as its bottom leaves the top edge.
 const through = (r) => clamp((innerHeight - r.top) / (innerHeight + r.height));
 let lastY = scrollY, queued = false;
@@ -107,13 +106,6 @@ function frame() {
     const r = el.getBoundingClientRect();
     if (r.bottom < 0 || r.top > innerHeight) continue;
     img.style.transform = `translate3d(0, ${((through(r) - 0.5) * -2 * f * 100).toFixed(2)}%, 0) scale(${1 + 2 * f})`;
-  }
-  if (drift) {
-    const r = drift.parentElement.getBoundingClientRect();
-    if (r.bottom > 0 && r.top < innerHeight) {
-      const room = Math.max(0, drift.scrollWidth - drift.parentElement.clientWidth);
-      drift.style.transform = `translate3d(${(-through(r) * room).toFixed(1)}px, 0, 0)`;
-    }
   }
 }
 const queue = () => { if (!queued) { queued = true; requestAnimationFrame(frame); } };

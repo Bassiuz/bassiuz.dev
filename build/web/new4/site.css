@@ -157,13 +157,15 @@ main, .footer { position: relative; z-index: 2; }
 .skill h3 { font-size: clamp(1.5rem, 2.4vw, 2rem); }
 .skill p { color: var(--muted); }
 
-/* ---- the quote, over a strip of screens that slides with the page ---- */
+/* ---- the quote, over a carousel of app screens: tilted and always moving, as on the root site ---- */
 .quote { position: relative; isolation: isolate; overflow: hidden; display: grid; place-items: center; min-height: clamp(380px, 46vw, 560px); padding: var(--gap) var(--edge); }
-.shots { position: absolute; inset: 0; z-index: -2; display: flex; align-items: center; }
-.shots-track { display: flex; gap: clamp(12px, 1.6vw, 24px); width: max-content; }
-.shots img { width: clamp(150px, 17vw, 250px); border-radius: clamp(16px, 2vw, 28px); opacity: .7; }
-.quote::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(var(--bg), rgba(6, 3, 26, .8) 22%, rgba(30, 10, 80, .86) 50%, rgba(6, 3, 26, .8) 78%, var(--bg)); }
-.quote blockquote { max-width: 24em; margin: 0; text-align: center; font: 600 clamp(1.5rem, 3vw, 2.25rem)/1.2 var(--display); letter-spacing: -.025em; }
+.shots { position: absolute; inset: 0; z-index: -2; display: flex; align-items: center; transform: rotate(-5.7deg) scale(1.18); }
+/* The line-up is in the track twice; sliding by exactly half its width makes the loop seamless. Spacing is a margin so both halves measure the same. */
+.shots-track { display: flex; flex: none; width: max-content; animation: carousel var(--loop, 120s) linear infinite; }
+@keyframes carousel { from { transform: translate3d(-50%, 0, 0); } }
+.shots img { width: clamp(150px, 17vw, 230px); aspect-ratio: 293 / 633; margin-right: clamp(12px, 1.6vw, 24px); object-fit: cover; object-position: top; border-radius: clamp(16px, 2vw, 28px); }
+.quote::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(var(--bg), rgba(6, 3, 26, .62) 22%, rgba(30, 10, 80, .74) 50%, rgba(6, 3, 26, .62) 78%, var(--bg)); }
+.quote blockquote { max-width: 24em; text-shadow: 0 2px 24px rgba(6, 3, 26, .9); margin: 0; text-align: center; font: 600 clamp(1.5rem, 3vw, 2.25rem)/1.2 var(--display); letter-spacing: -.025em; }
 .quote blockquote p::before { content: '\201C'; color: var(--v2); }
 .quote blockquote p::after { content: '\201D'; color: var(--v2); }
 
@@ -274,7 +276,7 @@ main, .footer { position: relative; z-index: 2; }
   .js .reveal, .js .clip img, .js [data-rise] span, .tilt { transform: none !important; clip-path: none !important; }
   .js .reveal { transition: opacity .3s ease; }
   .js .hero-title .ch, .js .hero-hello, .js .hero-role { animation: fade .3s ease both; }
-  .hero-grid, .hero-plumb, .cursor { animation: none; }
+  .hero-grid, .hero-plumb, .cursor, .shots-track { animation: none; }
   .sp, .swap, .tld { transition-duration: 0s, 0s, .3s; }
   ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
 }
